@@ -15,6 +15,10 @@
 
 /venv
 ./venv
+./GEO_PIZZA/venv
+./geo_pizza/venv
+/GEO_PIZZA/venv
+/geo_pizza/venv
 
 # Mono auto generated files
 mono_crash.*
