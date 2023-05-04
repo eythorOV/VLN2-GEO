@@ -1,0 +1,38 @@
+/* .menu {
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5)
+} */
+body {
+    background-color: #f9efde;
+}
+
+.home,
+.menu,
+.offers,
+.nutrit_ingred{
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    margin-top: 100px
+}
+
+/* .offers {
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5)
+    
+} */
+
+.icon-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+.container-fluid-bottom {
+    background-color: #e44c5d;
+}
+
+.container-fluid {
+    background-color: #e44c5d;
+    padding: 15px;
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 20px;
+}
