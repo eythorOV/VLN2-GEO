@@ -1,26 +1,4 @@
-/* .menu {
-    text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5)
-} */
-body {
-    background-color: #f9efde;
-}
-
-.home,
-.menu,
-.offers,
-.nutrit_ingred{
-    text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
-    margin-top: 100px
-}
-
-/* .offers {
-    text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5)
-    
-} */
-
+/* 
 .icon-bar {
     background-color: rgb(255, 255, 255);
 }
@@ -35,4 +13,74 @@ body {
     width: 80%;
     margin-top: 15px;
     border-radius: 20px;
+} */
+
+body {
+    background-color: #f9efde;
 }
+.pizzalogo {
+    text-align: right;
+    width: 20%;
+    border-radius: 30%;
+}
+
+
+.home,
+.menu,
+.offers,
+.nutrit_ingred{
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    margin-top: 30px
+}
+
+
+
+.container-fluid-bottom {
+    background-color: #e44c5d;
+}
+
+.container-fluid {
+    background-color: #e44c5d;
+    padding: 15px;
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+    /* text-decoration: none;
+    text-shadow: 1.5px 1.5px black; */
+    font-weight: bold;
+    font-style: italic;
+}
+
+.login {
+    text-align: right;
+}
+
+
+.logo_navigation_bar {
+    position: relative;
+    z-index: 9999;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7%;
+    border-radius: 30%;
+    margin-top: 30px;
+    padding: 5px 0 5px;
+}
+
+.order_now {
+    text-align: left;
+    margin-top: 200px;
+    border: #f9efde;
+    background-color: #f9efde;
+    /* padding-top: auto;
+    padding-bottom: auto; */
+}
+
+

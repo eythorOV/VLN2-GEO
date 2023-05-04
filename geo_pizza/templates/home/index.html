@@ -1,7 +1,15 @@
-
 {% extends "base.html" %}
 {% block content %}
-    <div class="home">
-        <h1>Home Page</h1>
-    </div>
+        <div class="home">
+            <h1>Home Page</h1>
+        </div>
+        <button class="order_now">
+            <h1>
+                Order now
+            </h1>
+        </button>
+        {% load static %} <img class="pizzalogo" src="{% static '/images/pizzalogo.jpg' %}" alt="pizzalogo">
+    <!-- <div class="pizzlogo">
+        <img src="pizzalogo.jpg" alt="pizzalogo">
+    </div> -->
 {% endblock %}
