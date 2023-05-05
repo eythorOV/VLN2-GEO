@@ -26,6 +26,7 @@ urlpatterns = [
     path('menu/', include('menu.urls')),
     path('offers/', include('offers.urls')),
     path('ingredients_nutrition/', include('nutrition_ingredients.urls')),
+    path('order/', include('home.urls'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()

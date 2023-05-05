@@ -4,3 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     return render(request, 'home/index.html')
+
+def order(request):
+    return render(request, 'order/index.html')
