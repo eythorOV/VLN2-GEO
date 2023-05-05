@@ -72,10 +72,27 @@ a {
     border-radius: 5%;
   }
 
-  .inner_block {
+.inner_block{
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    top: 47%;
     text-align: center;
-    background-color: rgb(255, 0, 0);
-    color: rgb(0, 0, 0);
-    margin-top: -35%;
+    background-color: #e44c5d;
+    color: white;
+    border-radius: 5%;
+    
+  }
+
+  #pizza_header {
+    margin: 3%;
+    font-size: 25px;
+    padding: 0.5%;
+    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+  }
+
+  #pizza_desc {
+    padding: 0;
+    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
   }
 /* END MENU AND OFFER BOXES */

@@ -1,7 +1,20 @@
 
 {% extends "base.html" %}
 {% block content %}
-    <div class="menu">
-        <h1>{{ name }} </h1>
-    </div>
+    <h1 class="title_menu">{{ title }}</h1>
+    <div class="menu_container">
+        <div class="block">
+            {% load static %} <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
+            <div class="inner_block">
+                <h4 id="pizza_header">Pizza name</h4>
+                <p id="pizza_desc">Description of pizza</p>
+            </div>
+        </div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
 {% endblock %}
