@@ -37,10 +37,6 @@ a:hover {
     color: black;
 }
 
-.login {
-    text-align: right;
-}
-
 
 .logo_navigation_bar {
     position: relative;
@@ -109,4 +105,23 @@ a.order_header {
     margin-right: auto;
     position: relative;
     float: right;
+} */
+
+a.navbar-brand-right {
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+ul.navbar-right {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+a.navbar-brand-right:hover {
+    color: black;
+}
+
+/* ul.nav.navbar-nav.navbar-right {
+    color: black;
 } */
