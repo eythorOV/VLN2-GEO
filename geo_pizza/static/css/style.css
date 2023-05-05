@@ -1,0 +1,88 @@
+
+body {
+    background-color: #f9efde;
+}
+
+.home,
+.menu,
+.offers,
+.nutrit_ingred{
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    margin-top: 30px
+}
+
+.container-fluid-bottom {
+    background-color: #e44c5d;
+}
+
+.container-fluid {
+    background-color: #e44c5d;
+    padding: 15px;
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+    /* text-decoration: none;
+    text-shadow: 1.5px 1.5px black; */
+    font-weight: bold;
+    font-style: italic;
+}
+
+.login {
+    text-align: right;
+}
+
+
+.logo_navigation_bar {
+    position: relative;
+    z-index: 9999;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+    border-radius: 30%;
+    margin-top: 45px;
+    padding: 5px 0 5px;
+}
+
+.pizzalogo {
+    float: right;
+    width: 40%;
+    border-radius: 40%;
+    margin-top: 20px;
+}
+
+.block {
+    width: 350px;
+    height: 350px;
+    border-radius: 5%;
+    margin: 0.5%;
+  }
+
+.block img {
+    margin-top: 50px;
+    width: 120%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 5%;
+    opacity: 0.5;
+  }
+
+  .inner_block {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    /* margin-top: -25%; */
+    margin-top: -70%;
+    position: relative;
+    z-index: 1;
+    margin-left: 140px;
+  }
+
+  .menu_container {
+    margin-top: 50px;
+  }

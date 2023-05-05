@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-        <div class="home">
+        <!-- <div class="home">
             <h1>Home Page</h1>
-        </div>
-        <button class="order_now">
-            <h1>
-                Order now
-            </h1>
-        </button>
-        {% load static %} <img class="pizzalogo" src="{% static '/images/pizzalogo.jpg' %}" alt="pizzalogo">
+        </div> -->
+        <!-- <h1 id="homepage" class="order_now">
+            <div class="order">Order now
+            </div>
+        </h1> -->
+
+        <div class="menu_container">
+            {% load static %} <img class="pizzalogo" src="{% static '/images/pizzalogo.jpg' %}" alt="pizzalogo">
+            <div class="block">
+                {% load static %} <img src="{% static '/images/steve.png'%}" alt="steve">
+                <div class="inner_block">
+                    <h1>Order now!</h1>
+                </div>
+            </div>
     <!-- <div class="pizzlogo">
         <img src="pizzalogo.jpg" alt="pizzalogo">
     </div> -->
