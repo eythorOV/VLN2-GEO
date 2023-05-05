@@ -39,15 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'playground',
-<<<<<<< HEAD
-    'home',
-    'users_test',
-=======
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
     'offers.apps.OffersConfig',
     'nutrition_ingredients.apps.NutritionIngredientsConfig',
->>>>>>> 82ea5f2eddf59bde5bc0c3d1fd223d2e9daba1a3
+    'menu_item.apps.MenuItemConfig',
+    'menu'
+
 ]
 
 MIDDLEWARE = [
@@ -88,10 +86,10 @@ WSGI_APPLICATION = 'GEO.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'geopizzadatabase',
-        'USER': 'geopizzadatabaseuser',
+        'NAME': 'geo-db',
+        'USER': 'geo-db-user',
         'PASSWORD': 'geosnillar123',
-        'HOST': '34.155.131.41',
+        'HOST': '34.28.158.116',
         'PORT': '5432',
     }
 }
