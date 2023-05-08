@@ -1,6 +1,53 @@
 
+/* footer{
+    bottom: 0;
+    width: 100%;
+    margin-top: 300px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* min-height: 100vh; 
+} */
+
+
+
+/* Footer content */
+.footer_container {
+    background-color: #e44c5d;
+    /* text-align: left; */
+    /* float: left; */
+    /* text-align: center; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 5.1rem;
+ }
+a.footer_value {
+    display: block;
+    /* padding: 15px;
+    margin-bottom: 10rem; */
+    font-size: 18px;
+    margin-top: 10px;
+    align-items: center;
+    margin-left: 10px;
+ }
+
+    a.footer_location,
+    a.footer_about {
+        display: flex;
+        float: right;
+        margin-right: 8px;
+        font-size: 18px;
+        margin-top: -41px;
+        padding: 15px;
+}
+/* Footer content */
+
+
 body {
     background-color: #f9efde;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .home,
@@ -14,15 +61,23 @@ body {
 
 .container-fluid-bottom {
     background-color: #e44c5d;
+    bottom: 0;
+    position: absolute;
 }
 
 .container-fluid {
     background-color: #e44c5d;
-    padding: 15px;
+    padding: 5px;
+    /* padding: 10px 0 10px; */
+    /* height: 80px; */
     width: 80%;
-    margin-top: 15px;
+    margin-top: 2rem;
     border-radius: 20px;
     justify-content: space-between;
+}
+
+.navbar-right, .navbar-header {
+    margin-top: 2rem;
 }
 
 a {
@@ -48,16 +103,18 @@ a:hover {
     border-radius: 30%;
     margin-top: 45px;
     padding: 5px 0 5px;
-    top: -95px;
+    top: -9rem;
 }
 
 .pizzalogo {
     float: right;
     width: 40%;
-    border-radius: 40%;
-    margin-top: 20px;
+    /* width: 45rem; */
+    border-radius: 16rem;
+    margin-top: 3rem;
 }
 
+/* Home page styling */
 .block {
     width: 350px;
     height: 350px;
@@ -66,11 +123,11 @@ a:hover {
   }
 
 .block img {
-    margin-top: 50px;
-    width: 120%;
+    margin-top: 3rem;
+    width: 44rem;
     /* height: 100%; */
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 1rem;
     opacity: 0.5;
   }
 
@@ -95,6 +152,45 @@ a.order_header {
     margin-right: auto;
     color: black;
 }
+/* END Home page styling */
+
+
+/* Navbar/footer styling*/
+a.navbar-brand-right {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+ul.navbar-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a.navbar-brand-right:hover {
+    color: black;
+}
+
+.cart {
+    overflow: hidden;
+    width: 5rem;
+    height: 3rem;
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: -15px;
+    }
+}
+/* END Navbar/footer styling */
+
+
+
+
 /* .container-fluid_1 {
     background-color: #e44c5d;
     padding: 15px;
@@ -107,21 +203,8 @@ a.order_header {
     float: right;
 } */
 
-a.navbar-brand-right {
-    font-size: 18px;
-    margin-right: 18px;
-}
-
-ul.navbar-right {
-    margin-top: 10px;
-    color: white;
-    text-align: center;
-}
-
-a.navbar-brand-right:hover {
-    color: black;
-}
-
-/* ul.nav.navbar-nav.navbar-right {
-    color: black;
+/* .little_pizza {
+    width: 5%;
+    position: relative;
+    z-index: 1;
 } */
