@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+    <div class="center">
+        <h1 class="title_user_profile">{{ title }}</h1>
+        <div class="user_profile">
+            <div class="text_field">
+                <input type="text" name="username" required>
+                <span></span>
+                <label>Username</label>
+                <p>Edit profile</p>
+            </div>
+            <div class="text_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Don't have an account? <a href="{% url 'sign_up' %}" >Sign up!</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

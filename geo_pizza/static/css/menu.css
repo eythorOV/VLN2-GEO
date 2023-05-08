@@ -71,6 +71,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-items: center;
     margin: 0.5rem 0 0.5rem 0;
 }
 
@@ -80,7 +81,8 @@ button {
     height: 36rem;
     background-color: lightgray;
     border-radius: 5%;
-    margin: 0.5%
+    margin: 0.5%;
+    cursor: pointer;
   }
 
 .inner_block {
@@ -125,6 +127,7 @@ button {
 	padding-left: 5px;
     margin: 0 0 0 -0.5rem;
 	background-color: white;
+    cursor: default;
 }
 
 .bottom_block .add_to_cart {

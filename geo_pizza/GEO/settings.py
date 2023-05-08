@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'offers.apps.OffersConfig',
     'nutrition_ingredients.apps.NutritionIngredientsConfig',
     'login.apps.LoginConfig',
+    'user_profile.apps.UserProfileConfig',
 ]
 
 MIDDLEWARE = [
