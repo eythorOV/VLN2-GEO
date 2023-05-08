@@ -1,42 +1,33 @@
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <nav class="navbar navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'menu-index' %}">Menu</a>
-        <a class="navbar-brand" href="{% url 'offers-index' %}">Offers</a>
-        <a class="navbar-brand" href="{% url 'home-order' %}">Order</a>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-    </div><!-- /.container-fluid -->
-    {% load static %} <a class="logo" href="/home"><img class="logo_navigation_bar" href="/home" src="{% static '/images/logo.jpg' %}" alt="Company logo"></a>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'menu-index' %}">Menu</a>
+      <!-- {% load static %} <a<img class="little_pizza" src="{% static '/images/little_pizza.png' %}" alt="little_pizza"></a> -->
+      <a class="navbar-brand" href="{% url 'offers-index' %}">Offers</a>
+    </div>
 
-  </nav>
-
-
-<nav class="navbar navbar-fixed-bottom">
-    <div class="container-fluid-bottom">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'nutrition_ingredients-index' %}">Ingredients- and nutritional values</a>
-        </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  </nav>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navbar-right">
+        <!-- <li><a href="{% url 'menu-index' %}">Menu <span class="sr-only">(current)</span></a></li>
+        <li><a href="{% url 'offers-index' %}">Offers</a></li> -->
+        <a class="navbar-brand-right" href="{% url 'login-page' %}">Login</a>
+        <a class="navbar-brand-right" href="{% url 'sign_up' %}">Sign up</a>
+        <!-- <a class="navbar-brand-right" href="#"><img class="cart" src="{% static '/images/cart.png'%}" alt="cart"> -->
+        <a class="navbar-brand-right" href="#">Cart</a>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  <div class="top_logo">
+    {% load static %} <a href="/home"><img class="logo_navigation_bar" src="{% static '/images/pizzalogo.jpg' %}" alt="Company logo"></a>
+  </div>
+</nav>

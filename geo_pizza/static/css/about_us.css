@@ -25,7 +25,7 @@ body {
     border-bottom: 2px dashed grey;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 80%;
 }
 
 .left .paragraph_description {
@@ -33,5 +33,19 @@ body {
     border-bottom: 2px dashed grey;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 80%;
+}
+
+.right {
+    text-align: center;
+    width: 50%;
+    height: 50rem;
+    float: right;
+}
+
+.right img {
+    justify-content: center;
+    align-items: center;
+    width: 87.5%;
+    border: 2px solid black;
 }

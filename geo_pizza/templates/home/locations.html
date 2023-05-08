@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+    <div class="title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="left">
+        <div class="about_us_info">
+            <h2 class="our_story">GEO Pizzahouse Locations</h2>
+
+            <div class="description_container">
+                <p class="paragraph_description">
+                    Nestled in the heart of Reykjavik, just a stone's throw away 
+                    from the enchanting Nautholsvik, lies the vibrant home of GEO Pizzahouse. 
+                    Our location on Menntavegur 1 provides the perfect backdrop for indulging in
+                     our mouthwatering pizzas. As you step inside, the inviting aromas and warm 
+                     ambiance embrace you, creating a cozy haven to savor every slice. Whether 
+                     you're a local or a traveler exploring Iceland's wonders, our pizzeria 
+                     promises an unforgettable experience in the heart of this captivating city.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <img class="geo_location" src="{% static '/images/geo_location.jpg' %}" alt="Geo location satelite">
+    </div>
+{% endblock %}

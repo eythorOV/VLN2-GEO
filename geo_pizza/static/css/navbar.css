@@ -1,0 +1,44 @@
+a.navbar-brand-right {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+ul.navbar-right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a.navbar-brand-right:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.cart {
+    overflow: hidden;
+    width: 5rem;
+    height: 3rem;
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: -15px;
+    }
+}
+
+.top_logo .logo_navigation_bar {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+    border-radius: 30%;
+    margin-top: 45px;
+    padding: 5px 0 5px;
+    top: -9rem;
+}

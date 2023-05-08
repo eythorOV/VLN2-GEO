@@ -10,3 +10,6 @@ def order(request):
 
 def about_us(request):
     return render(request, 'home/about_us.html', {'title': 'About Us'})
+
+def locations(request):
+    return render(request, 'home/locations.html', {'title': 'Our Locations'})
