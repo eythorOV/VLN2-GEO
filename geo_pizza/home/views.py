@@ -7,3 +7,6 @@ def index(request):
 
 def order(request):
     return render(request, 'home/order.html', {'title': 'Order Now'})
+
+def about_us(request):
+    return render(request, 'home/about_us.html', {'title': 'About Us'})

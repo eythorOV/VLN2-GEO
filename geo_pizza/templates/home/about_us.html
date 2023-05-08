@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+    <div class="title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="left">
+        <div class="about_us_info">
+            <h2 class="our_story">Our Story</h2>
+
+            <div class="description_container">
+                <p class="paragraph_description">
+                    It all starting on a monday morning when our team of 3 people decided to start a pizza business.
+                    We had no idea what we were doing but we were determined to make it work. We started by making a 
+                    list of all the things we needed to do and then we started working on them one by one. We created
+                    Diagrams and charts to help us visualize our progress and to help us keep track of what we needed to
+                    do to start the business. In May of 2023 we were finally ready to open our website to users and the rest
+                    is history.
+                    <br>
+                    We are now the biggest pizza company in the world and we are still growing. 
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
