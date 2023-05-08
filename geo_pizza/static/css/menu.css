@@ -12,6 +12,11 @@ button {
     cursor: pointer;
 }
 
+.search_bar #text_field {
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
 .spicy, 
 .search_button{
     background-color: #e44c5d;
@@ -52,6 +57,7 @@ button {
 
 .order_by {
     float: right;
+    margin-right: 5rem;
 }
 
 .order_button {
@@ -63,7 +69,7 @@ button {
 .order_button:active,
 .order_button:focus {
     background-color: #e44c5d;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
 }
 

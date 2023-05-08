@@ -94,7 +94,7 @@
 .bottom_block .add_to_cart {
     background-color: white;
     color: black;
-    cursor: help;
+    cursor: pointer;
 }
 
 button {
