@@ -8,7 +8,6 @@ a {
 }
 
 .order,
-.home,
 .title_menu,
 .title_offers,
 .title_nutrit_ingred {
@@ -44,12 +43,8 @@ a {
     border-radius: 50%;
 }
 
-.order {
-    margin-top: 50%;
-}
-
 /* MENU AND OFFER BOXES */
-.menu_container,
+/* .menu_container,
 .offer_container {
     display: inline-grid;
     grid-template-columns: auto auto auto;
@@ -94,5 +89,5 @@ a {
   #pizza_desc {
     padding: 0;
     border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
-  }
+  } */
 /* END MENU AND OFFER BOXES */

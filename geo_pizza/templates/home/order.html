@@ -1,14 +1,24 @@
 
 {% extends "base.html" %}
 {% block content %}
-    <div class="order">
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-        <h1>Order</h1>
-    </div>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+<div class="flex-all">
+<div class="title">
+    <h1>{{ title }}</h1>
+    <span></span>
+    <p>Please select Menu or Offers to continue</p>
+</div>
+<div class="flex-image">
+    <img src="{% static 'images/holding_hands.png' %}" alt="Pizzas holding hands" class="holding_hands">
+</div>
+<div class="flex-container">
+    <button class="box">
+        <a href="{% url 'menu-index' %}">Menu</a>
+    </button>
+    <button class="box">
+        <a href="{% url 'offers-index' %}">Offers</a>
+    </button>
+</div>
+</div>
 {% endblock %}

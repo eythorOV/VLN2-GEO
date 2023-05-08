@@ -2,11 +2,58 @@
 
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/offers.css' %}">
     <h1 class="title_offers">{{ title }}</h1>
     <div class="offer_container">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-      </div>
+
+        <div class="block">
+             <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
+             <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+
+            <div class="inner_block">
+                <h2 id="pizza_name">Lunch Offer</h2>
+                <p id="pizza_description">Select a pizza from the menu and a soda</p>
+                <p id="pizza_price">Price: 3990 ISK</p>
+
+                <div class="bottom_block">
+                    <button class="add_to_cart">Select offer</button>
+                </div>
+
+            </div>    
+        </div>
+
+        <div class="block">
+            <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
+            <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+
+           <div class="inner_block">
+               <h2 id="pizza_name">Lunch Offer</h2>
+               <p id="pizza_description">Select a pizza from the menu and a soda</p>
+               <p id="pizza_price">Price: 3990 ISK</p>
+
+               <div class="bottom_block">
+                   <button class="add_to_cart">Select offer</button>
+               </div>
+
+           </div>    
+       </div>
+
+       <div class="block">
+            <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
+            <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+
+            <div class="inner_block">
+                <h2 id="pizza_name">Lunch Offer</h2>
+                <p id="pizza_description">Select a pizza from the menu and a soda</p>
+                <p id="pizza_price">Price: 3990 ISK</p>
+
+                <div class="bottom_block">
+                    <button class="add_to_cart">Select offer</button>
+                </div>
+
+            </div>    
+        </div>
+    
+    </div>
 {% endblock %}

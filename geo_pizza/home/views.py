@@ -6,4 +6,4 @@ def index(request):
     return render(request, 'home/index.html')
 
 def order(request):
-    return render(request, 'home/order.html', {'title': 'Order'})
+    return render(request, 'home/order.html', {'title': 'Order Now'})

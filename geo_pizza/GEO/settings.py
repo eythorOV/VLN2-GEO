@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'menu.apps.MenuConfig',
     'offers.apps.OffersConfig',
     'nutrition_ingredients.apps.NutritionIngredientsConfig',
+    'login.apps.LoginConfig',
 ]
 
 MIDDLEWARE = [
