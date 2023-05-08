@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.pizza_title h1{
+    text-align: center;
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    margin-top: 15%;
+}
+
+.left {
+    background-color: bisque;
+    text-align: center;
+    width: 50%;
+    height: 50rem;
+    float: left;
+    border-radius: 10px;
+}
+
+.left .pizza_name {
+    padding: 5rem 0 2rem 0;
+    border-bottom: 2px dashed grey;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.left .paragraph_description {
+    padding: 0.5rem 0 2rem 0;
+    border-bottom: 2px dashed grey;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.left #quantity {
+    margin-bottom: 0rem;
+    margin-right: 15rem;
+    border: none;
+    color: grey;
+    width: 5rem;
+    height: 3rem;
+    text-align: center;
+}
+
+.left button {
+    background-color: #e44c5d;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.left button:hover {
+    background-color: #e44c5d;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+}
+
+.left button:active {
+    background-color: #97303c;
+    transform: scale(1);
+    color: white;
+    cursor: pointer;
+}
+
+.right {
+    text-align: center;
+    width: 50%;
+    height: 50rem;
+    float: right;
+}
+
+.right .pizza_img {
+    justify-content: center;
+    align-items: center;
+    width: 87%;
+    border-radius: 10px;
+}

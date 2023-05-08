@@ -25,8 +25,8 @@ urlpatterns = [
     path('playground/', include('playground.urls')),
     path('', include('home.urls')),
     path('', include('login.urls')),
-    path('menu/', include('menu.urls')),
-    path('offers/', include('offers.urls')),
+    path('', include('menu.urls')),
+    path('', include('offers.urls')),
     path('ingredients_nutrition/', include('nutrition_ingredients.urls')),
     path('', include('user_profile.urls')),
 
