@@ -21,6 +21,10 @@
     </div>
     
     <div class="menu_container">
+
+        {% for pizza in pizzas %}
+            {% include 'menu/single_pizza.html' with pizza=pizza %}
+        {% endfor %}
         <div class="block" href="home/">
                 <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
             <div class="inner_block">
