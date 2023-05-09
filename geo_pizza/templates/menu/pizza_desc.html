@@ -8,19 +8,19 @@
 
     <div class="left">
         <div class="pizza_info">
-            <h2 class="pizza_name">Pizza Name</h2>
+            <h2 class="pizza_name">{{pizza.name}}</h2>
 
             <div class="description_container">
                 <p class="paragraph_description">
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
-                    Here is a detailed description of the toppings of the pizza and how it is made
+                    {{pizza.description}}
+                    <p class="p_toppings">
+                    Pizza toppings:
+                    </p>
+                    {% for topping in toppings %}
+                    <li>{{topping.name}}</li>
+                    {% endfor %}
                 </p>
-                <p class="paragraph_price">Price: 0000 ISK</p>
+                <p class="paragraph_price">Price: {{pizza.price}} ISK</p>
             </div>
 
             <div class="quantity_cart">
@@ -32,6 +32,6 @@
     </div>
 
     <div class="right">
-        <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image">
+        <img class="pizza_img" src="{{pizza.image}}" alt="Margherita pizza image">
     </div>
 {% endblock %}

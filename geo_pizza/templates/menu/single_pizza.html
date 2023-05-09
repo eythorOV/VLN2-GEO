@@ -1,5 +1,7 @@
 {% load static %}
+
 <div class="block" href="home/">
+    <a href="/menu/{{pizza.id}}">
     <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}"></a>
 <div class="inner_block">
     <h2 id="pizza_name">{{pizza.name}}</h2>
@@ -9,5 +11,6 @@
         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
         <button class="add_to_cart">Add to cart</button>
     </div>
-</div>    
+</div> 
+</a>   
 </div>
