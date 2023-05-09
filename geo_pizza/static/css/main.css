@@ -1,7 +1,8 @@
 body {
     background-color: #f9efde;
-    overflow-x: hidden;
-    min-height: 100vh;
+    /* overflow-x: hidden; */
+    min-height: 150vh;
+    /* padding-bottom: 2rem; */
 }
 
 .order,
