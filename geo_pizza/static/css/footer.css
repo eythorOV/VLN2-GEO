@@ -11,28 +11,27 @@ body {
     bottom: 0rem;
  }
 
-a.footer_value {
+a.left_value {
     display: block;
+    float: left;
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 1rem;
     align-items: center;
     margin-left: 10px;
  }
 
-a.footer_location,
-a.footer_about {
-    display: flex;
-    float: right;
+a.right_location,
+a.right_about {
     margin-right: 8px;
     font-size: 18px;
+    padding: 1rem 1rem 1rem 1rem;
     margin-top: -41px;
-    padding: 15px;
 }
 
 
-.footer_location:hover,
-.footer_about:hover,
-.footer_value:hover {
+.right_location:hover,
+.right_about:hover,
+.left_value:hover {
     color: black;
     text-decoration: none;
 }
