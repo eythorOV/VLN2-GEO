@@ -2,6 +2,8 @@
 a.navbar-brand {
     font-size: 18px;
     text-shadow: 2px 2px black;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 a.navbar-brand:hover {
@@ -37,12 +39,12 @@ a.navbar-brand-right:hover {
     height: 3rem;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .navbar-right {
         float: right !important;
         margin-right: -15px;
     }
-}
+} */
 
 .top_logo .logo_navigation_bar {
     position: relative;
