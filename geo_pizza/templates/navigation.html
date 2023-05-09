@@ -10,6 +10,13 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{% url 'home-index' %}">GEO Pizza</a>
+        {% if user.is_authenticated %}
+          <a class="navbar-brand" href="{% url 'login-logout' %}">Logout</a>
+          <a class="navbar-brand" href="{% url 'login-profile' %}">Profile</a>
+        {% else %}
+          <a class="navbar-brand" href="{% url 'login-page' %}">Login</a>
+          <a class="navbar-brand" href="{% url 'login-sign_up' %}">Sign up</a>
+        {% endif %}
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->

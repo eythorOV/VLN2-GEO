@@ -14,6 +14,14 @@
 
 </head>
 <body>
+    {% if messages %}
+        {% for message in messages %}
+            <div {%if message.tages%} class="{{ message.tags }} message_box" {% endif %}>
+                <p>{{ message }}</p>
+                <i class="fas fa-times closeMessageDiv"></i>
+            </div>
+        {% endfor %}
+    {% endif %}
     {% include 'navigation.html' %}
 <!-- The base template -->
       <div class="container">

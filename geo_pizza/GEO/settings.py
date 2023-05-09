@@ -39,15 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'playground',
-<<<<<<< HEAD
-    'home',
-    'users_test',
-=======
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
     'offers.apps.OffersConfig',
     'nutrition_ingredients.apps.NutritionIngredientsConfig',
->>>>>>> 82ea5f2eddf59bde5bc0c3d1fd223d2e9daba1a3
+    'login.apps.LoginConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -88,10 +85,10 @@ WSGI_APPLICATION = 'GEO.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'geopizzadatabase',
-        'USER': 'geopizzadatabaseuser',
+        'NAME': 'geo-db',
+        'USER': 'geo-db-user',
         'PASSWORD': 'geosnillar123',
-        'HOST': '34.155.131.41',
+        'HOST': '34.28.158.116',
         'PORT': '5432',
     }
 }
@@ -140,3 +137,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/login/login'
+LOGIN_REDIRECT_URL = '/profile'
+AUTH_USER_MODEL = 'login.User_phonenr'
