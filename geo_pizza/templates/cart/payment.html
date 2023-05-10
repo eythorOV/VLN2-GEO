@@ -17,18 +17,20 @@
             <span></span>
             <label>Credit card number</label>
         </div> 
-        <div class="text_field street" id="exp_date">
-            <input type="text" name="expiration date" required>
-            <span></span>
-            <label>Exp. date</label>
-        </div>
-        <div class="text_field street" id="cvc">
-            <input type="text" name="cvc" required>
-            <span></span>
-            <label>CVC</label>
-        </div>
+        <div class="row">
+            <div class="text_field" id="exp_date">
+              <input type="text" name="expiration date" required>
+              <span></span>
+              <label>Exp. date (MM/YY)</label>
+            </div>
+            <div class="text_field" id="cvc">
+              <input type="text" name="cvc" required>
+              <span></span>
+              <label>CVC</label>
+            </div>
+          </div>
         <a href="{% url 'checkout-review-info'%}">
-        <input type="submit" value="Proceed to Payment">
+        <input type="submit" value="Confirm Payment">
         </a>
     <!-- </form> -->
 </div>
@@ -36,7 +38,7 @@
             <!-- <input type="submit" value="Confirm information"> -->
     </div>
 
-<script>
+<!-- <script>
 // Get the form element
 const form = document.querySelector('form');
 
@@ -70,5 +72,5 @@ form.addEventListener('submit', function(event) {
 });
 
 
-</script>
+</script> -->
 {% endblock content %}
