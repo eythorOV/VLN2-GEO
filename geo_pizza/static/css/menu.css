@@ -171,4 +171,17 @@ button {
     cursor: pointer;
   }
 
+.add_to_cart:hover {
+    border-radius: 5px;
+    background-color: #e44c5d;
+    color: white;
+    transition: 0.5s;
+}
+
+.add_to_cart:active {
+    background-color: #48171d;
+    color: white;
+    transition: 0;
+}
+
 /* END MENU AND OFFER BOXES */
