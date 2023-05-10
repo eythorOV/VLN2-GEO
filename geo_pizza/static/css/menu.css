@@ -181,7 +181,7 @@ button {
 .add_to_cart:active {
     background-color: #48171d;
     color: white;
-    transition: 0;
+    transition: 0s;
 }
 
 /* END MENU AND OFFER BOXES */

@@ -97,7 +97,7 @@
     cursor: pointer;
 }
 
-button {
+.add_to_cart {
     border: none;
     color: white;
     padding: 0.5rem 1rem;
@@ -107,4 +107,16 @@ button {
     border-radius: 1rem;
     margin: 0.5rem;
     cursor: pointer;
+}
+
+.add_to_cart:hover {
+    background-color: #e44c5d;
+    color: white;
+    transition: 0.5s;
+}
+
+.add_to_cart:active {
+    background-color: #48171d;
+    color: white;
+    transition: 0s;
 }

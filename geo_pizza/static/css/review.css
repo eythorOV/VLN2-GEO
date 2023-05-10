@@ -30,16 +30,38 @@
     border: 1px solid black;
 }
 
+th, td {
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    font-size: 17px;
+}
+
+th {
+    font-size: 20px;
+    color: black;
+}
+
+.quantity_filled_out {
+    background-color: white;
+    padding: 2px 0px 2px 0px;
+}
+
 .cart_info {
     background-color:  bisque;
     padding: 30px;
     padding: 2rem 4rem 2rem 4rem;
     margin-top: 3rem;
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
     display: inline-block;
     text-align: right;
     border: 1px solid black;
+
 }
 
 .text_field {
@@ -68,12 +90,12 @@ h3.cart_title {
 .confirm_order {
     margin-top: 3rem;
     color: white;
-    width: 15%;
+    width: 20%;
     border: none;
     background-color:  #e44c5d;
     border-radius: 2rem;
     font-size: 18px;
-    padding: 0.5rem;
+    padding: 0.8rem;
     transition: .5s;
     font-weight: bold;
     text-decoration: none;

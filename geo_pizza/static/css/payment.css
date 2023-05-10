@@ -86,11 +86,17 @@ input[type="submit"] {
     outline: none;
     cursor: pointer;
     transition: .5s;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-size: 18px;
 }
 
 input[type="submit"]:hover {
     border-color: #e44c5d;
     transition: .5s;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
 }
 
 .country_selector {
