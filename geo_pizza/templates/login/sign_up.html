@@ -8,16 +8,6 @@
         <h1>Create profile</h1>
         <form method="POST">
             {% csrf_token %}
-            <!-- <form class="form form-horizontal" method="post">
-                {% csrf_token %}
-                {{form}}
-                <input type="submit" class="btn btn-primary" value="Sign up">
-            </form> -->
-            <div class="text_field" id="phone">
-                <input type="tel" name="phonenumber" required>
-                <span></span>
-                <label>Phone number</label>
-            </div>
             <div class="text_field">
                 <input type="text" name="first_name" required>
                 <span></span>

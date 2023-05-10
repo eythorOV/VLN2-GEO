@@ -18,8 +18,9 @@ class SpecialOffer(models.Model):
     description = models.TextField()
     price = models.IntegerField()
     image = models.CharField(max_length=255)
-    pizzas = models.ManyToManyField(Pizza)
-    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE)
+    pizzas = models.ForeignKey(Pizza, on_delete=models.CASCADE, null=True, blank=True)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
+    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.name
 
@@ -28,9 +29,8 @@ class LunchOffer(models.Model):
     description = models.TextField()
     price = models.IntegerField()
     image = models.CharField(max_length=255)
-    pizzas = models.ManyToManyField(Pizza)
-    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE)
-    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE)
+    pizzas = models.ForeignKey(Pizza, on_delete=models.CASCADE, null=True, blank=True)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.name
 
@@ -40,7 +40,7 @@ class TwoForOne(models.Model):
     price = models.IntegerField()
     image = models.CharField(max_length=255)
     pizzas = models.ManyToManyField(Pizza)
-    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE)
-    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
+    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.name

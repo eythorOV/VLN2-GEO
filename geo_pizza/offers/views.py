@@ -1,8 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
-
-
-def index(request):
-    return render(request, 'offers/index.html')
+def offer_list(request):
+    return render(request, 'offers/offer_list.html')

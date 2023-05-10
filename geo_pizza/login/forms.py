@@ -1,4 +1,6 @@
+from fileinput import FileInput
 from django.forms import ModelForm, widgets
+from django.contrib.auth.forms import UserCreationForm
 from login.models import Profile
 
 class ProfileForm(ModelForm):
@@ -6,9 +8,9 @@ class ProfileForm(ModelForm):
         model = Profile
         exclude = ['id', 'user']
         widgets = {
-            'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
-            'phone_number': widgets.TextInput(attrs={'class': 'form-control'}),
-            'profile_image': widgets.TextInput(attrs={'class': 'form-control'}),
+            'first_name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'last_name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'profile_image': widgets.FileInput(attrs={'class': 'form-control'}),
         }
 
 

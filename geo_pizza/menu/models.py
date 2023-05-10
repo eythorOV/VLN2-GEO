@@ -1,4 +1,3 @@
-from django.db import models
 
 from django.db import models
 
@@ -9,12 +8,9 @@ class Toppings(models.Model):
     def __str__(self):
         return self.name
 
-
 class Pizza(models.Model):
     name = models.CharField(max_length=100)
-    priceSmall = models.IntegerField()
-    priceMedium = models.IntegerField()
-    priceLarge = models.IntegerField()
+    price = models.IntegerField()
     spicy = models.BooleanField()
     vegan = models.BooleanField()
     desert = models.BooleanField()

@@ -1,8 +1,9 @@
 {% extends 'base.html'}
 {% block content %}
+{% load static %}
     <h1>Profile</h1>
     <form class="form form-horizontal" method="post">
-        {% csfr_token %}
+        {% csrf_token %}
         {{form}}
         <input type="submit" class="btn btn-primary" value="Update"/>
     </form>
