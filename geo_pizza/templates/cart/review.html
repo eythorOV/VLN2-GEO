@@ -4,18 +4,55 @@
 <link rel="stylesheet" href="{% static 'css/review.css' %}">
 <div class="title">
     <h1>{{ title }}</h1>
-    <div class="center">
-        <h3 class="contact_info">Contact Info</h3>
+    <div class="contact_info">
+        <h3 class="contact_title">Contact Info</h3>
         <form action="{% url 'checkout-payment-info'%}" method="POST">
-            <div></div>
             <div class="text_field" id="first_name">
-                <label>Full name: <span class="filled_out_info">Oliver Gabriel</span> </label>
+                <label>Full name: <span class="filled_out_info">Oliver Gabriel Figlarski</span> </label>
             </div>
             <div class="text_field" id="last_name">
                 <label>Address: <span class="filled_out_info">Háeyrarvellir 42</span></label>
             </div> 
             <div class="text_field">
-                <label>Location: <span class="filled_out_info">Ísland, Eyrarbakki, 820</span></label>
+                <label>City: <span class="filled_out_info">Eyrarbakki, 820</span></label>
+            </div>
+            <div class="text_field">
+                <label>Country: <span class="filled_out_info">Ísland</span></label>
+            </div>
+        </form>
+    </div>
+    <div class="payment_info">
+        <h3 class="payment_title">Payment Info</h3>
+        <form action="{% url 'checkout-payment-info'%}" method="POST">
+            <div class="text_field" id="first_name">
+                <label>Cardholder: <span class="filled_out_info">Oliver Gabriel Figlarski</span> </label>
+            </div>
+            <div class="text_field" id="last_name">
+                <label>Card number: <span class="filled_out_info">**** **** **** 9892</span></label>
+            </div> 
+            <div class="text_field">
+                <label>Expiration date: <span class="filled_out_info">10/27</span></label>
+            </div>
+            <div class="text_field">
+                <label> CVC: <span class="filled_out_info">820</span></label>
+            </div>
+        </form>
+    </div>
+    <!-- <br> -->
+    <div class="cart_info">
+        <h3 class="cart_title">Cart Info</h3>
+        <form action="{% url 'checkout-payment-info'%}" method="POST">
+            <div class="text_field" id="first_name">
+                <label>Cardholder: <span class="filled_out_info">Oliver Gabriel Figlarski</span> </label>
+            </div>
+            <div class="text_field" id="last_name">
+                <label>Card number: <span class="filled_out_info">**** **** **** 9892</span></label>
+            </div> 
+            <div class="text_field">
+                <label>Expiration date: <span class="filled_out_info">10/27</span></label>
+            </div>
+            <div class="text_field">
+                <label> CVC: <span class="filled_out_info">820</span></label>
             </div>
         </form>
     </div>
