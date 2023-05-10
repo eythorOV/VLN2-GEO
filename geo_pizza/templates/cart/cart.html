@@ -1,10 +1,29 @@
-
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+<div class="cart_container">
+    <h1 class="cart_menu">Your Cart</h1>
     <div class="center">
-        <h1>Your Cart</h1>
-        <p>Hello there</p>
+        <table class="cart_table">
+            <tr>
+                <th>Pizza name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Pizza 1</td>
+                <td>2</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>Pizza 2</td>
+                <td>1</td>
+                <td>$12</td>
+            </tr>
+            <!-- Add more rows for each pizza item -->
+        </table>
     </div>
+    <!-- <button></button> -->
+</div>
 {% endblock content %}
