@@ -23,12 +23,11 @@ body {
     margin-right: auto;
     margin-left: auto;
     /* position: absolute; */
-    margin-top: 8rem;
+    margin-top: 2rem;
     /* top: 56%;
     left: 50%; */
     /* transform: translate(-50%, -50%); */
     width: 100rem;
-    border-radius: 10px;
     background-color: white;
     /* overflow: scroll; */
     text-align: center;
@@ -38,7 +37,7 @@ body {
 .center h1 {
     text-align: center;
     padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.5);
 }
 
 .center form {
@@ -47,8 +46,7 @@ body {
 }
 
 .cart_table {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border: 2px solid black;
     justify-content: space-between;
     width: 100%;
 }
@@ -127,13 +125,21 @@ th {
     margin-top: 10px;
 }
 
-.total_price{
-    float: right;
-    position: relative;
-    width: 100%;
-    text-align: left;
+
+.bottom_box {
+    background-color: #e44c5d;
 }
 
+.bottom_box .total_price {
+    float: right;
+    width: 100%;
+    /* text-align: left; */
+    border: none;
+    background-color: #e44c5d;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
 /* tr:nth-child(even) {
     background-color: #f2f2f2;
 } */

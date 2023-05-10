@@ -14,48 +14,39 @@
             </tr>
             <tr>
                 <td>Hawaiian</td>
-                <td>2</td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10" value="1"></td>
                 <td>$20</td>
-                <!-- <button>X</button> -->
+                <td><button>X</button></td>
+            </tr>
+            <tr>
+                <td>Margherita </td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10" value="1"></td>
+                <td>$12</td>
+                <td><button>X</button></td>
             </tr>
             <tr>
                 <td>Pepperoni </td>
-                <td>1</td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10" value="1"></td>
                 <td>$12</td>
+                <td><button>X</button></td>
             </tr>
             <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
+                <td>Pepperoni and Mushroom</td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10" value="1"></td>
                 <td>$12</td>
+                <td><button>X</button></td>
             </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <th class="total_price">Total price: 30$</th>
+            <tr class="bottom_box">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total_price">Total price: 30$</td>
             </tr>
             <!-- Add more rows for each pizza item -->
         </table>
     </div>
     <div class="checkout_button">
-        <a href="#">Procced to checkout</a>
+        <a href="{% url 'checkout-contact-info'%}">Procced to checkout</a>
     </div>
     <div class="buy_more">
         <a href="{% url 'menu-index'%}">Buy more!</a>
