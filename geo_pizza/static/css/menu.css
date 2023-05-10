@@ -17,6 +17,14 @@ button {
     padding: 0.5rem 1rem;
 }
 
+.all {
+    background-color: rgb(77, 48, 110)
+}
+
+.all:active {
+    background: rgb(44, 28, 63);
+    transform: translateY(4px);
+}
 .spicy, 
 .search_button{
     background-color: #e44c5d;

@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="block" href="home/">
+<div class="block" href="home/" data-spicy="{{ pizza.spicy }}" data-vegan="{{ pizza.vegan }}" data-desert="{{ pizza.desert }}" data-popular="{{ pizza.popular }}">
     <a href="/menu/{{pizza.id}}">
     <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}"></a>
 <div class="inner_block">
