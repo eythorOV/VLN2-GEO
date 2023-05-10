@@ -65,3 +65,24 @@ h3.cart_title {
     justify-content: center;
 }
 
+.confirm_order {
+    margin-top: 3rem;
+    color: white;
+    width: 15%;
+    border: none;
+    background-color:  #e44c5d;
+    border-radius: 2rem;
+    font-size: 18px;
+    padding: 0.5rem;
+    transition: .5s;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+}
+
+.confirm_order:hover {
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+}
+
