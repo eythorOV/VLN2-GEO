@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'GEO.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'geo-db',
+        'NAME': 'geo-db-1',
         'USER': 'geo-db-user',
         'PASSWORD': 'geosnillar123',
         'HOST': '34.28.158.116',

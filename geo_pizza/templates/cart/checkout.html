@@ -3,9 +3,6 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
-<div class="title">
-    <h1>{{ title }}</h1>
-</div>
 <div class="center">
     <h1>Contact Information</h1>
     <form method="POST">
@@ -25,18 +22,19 @@
             <label>Street name</label>
         </div>
         <div class="text_field number">
-            <input type="password" name="number" required>
+            <input type="text" name="number" required>
             <span></span>
-            <label>Nr.</label>
+            <label>House number</label>
         </div>
         <div class="text_field">
-            <input type="password" name="password" required>
+            <input type="text" name="city" required>
             <span></span>
-            <label>Confirm password</label>
+            <label>City</label>
         </div>
+
         <label class="country_selector" for="country">Country</label>     
         
-        <select id="country" name="country" class="form-control">
+        <select id="country" name="country" class="form-control" required>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -282,10 +280,51 @@
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
         </select>
-        <input type="submit" value="Create account">
+
+        <div class="text_field">
+            <input type="text" name="postal_code" required>
+            <span></span>
+            <label>Postal code</label>
+        </div>
+        <input type="submit" value="Proceed to Payment">
     </form>
 </div>
 
             <!-- <input type="submit" value="Confirm information"> -->
     </div>
+
+<script>
+    // Get the form element
+const form = document.querySelector('form');
+
+// Add event listener for form submission
+form.addEventListener('submit', function(event) {
+  // Get the house number and postal code values
+  const houseNumberInput = document.querySelector('input[name="number"]');
+  const postalCodeInput = document.querySelector('input[name="postal_code"]');
+  const houseNumber = houseNumberInput.value.trim();
+  const postalCode = postalCodeInput.value.trim();
+
+  // Validate house number
+  if (isNaN(houseNumber)) {
+    // Display error message for invalid house number
+    houseNumberInput.classList.add('error');
+    event.preventDefault();
+  } else {
+    // Remove error message if present
+    houseNumberInput.classList.remove('error');
+  }
+
+  // Validate postal code
+  if (isNaN(postalCode) || postalCode.length > 3) {
+    // Display error message for invalid postal code
+    postalCodeInput.classList.add('error');
+    event.preventDefault();
+  } else {
+    // Remove error message if present
+    postalCodeInput.classList.remove('error');
+  }
+});
+
+</script>
 {% endblock content %}
