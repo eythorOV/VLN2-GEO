@@ -6,14 +6,14 @@
 
 <div class="center">
   <h1>Contact Information</h1>
-    <form action="{% url 'checkout-payment-info'%}" method="POST">
+    <!-- <form method="POST"> -->
         <div class="text_field" id="first_name">
-            <input type="text" name="name" required>
+            <input type="text" name="firstname" required>
             <span></span>
             <label>First name</label>
         </div>
         <div class="text_field" id="last_name">
-            <input type="text" name="name" required>
+            <input type="text" name="lastname" required>
             <span></span>
             <label>Last name</label>
         </div> 
@@ -23,7 +23,7 @@
             <label>Street name</label>
         </div>
         <div class="text_field number">
-            <input type="text" name="number" required>
+            <input type="text" name="house number" required>
             <span></span>
             <label>House number</label>
         </div>
@@ -287,8 +287,10 @@
             <span></span>
             <label>Postal code</label>
         </div>
-        <input type="submit" value="Proceed to Payment">
-    </form>
+        <a href="{% url 'checkout-payment-info'%}">
+        <input type="submit" href="{% url 'checkout-payment-info'%}" value="Proceed to Payment">
+        </a>
+    <!-- </form> -->
 </div>
 
             <!-- <input type="submit" value="Confirm information"> -->

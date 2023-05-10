@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/payment.css' %}">
+
+<div class="center">
+  <h1>Payment Information</h1>
+    <!-- <form method="POST"> -->
+        <div class="text_field" id="card_holder_name">
+            <input type="text" name="name" required>
+            <span></span>
+            <label>Name of card holder</label>
+        </div>
+        <div class="text_field" id="card_number">
+            <input type="text" name="card number" required>
+            <span></span>
+            <label>Credit card number</label>
+        </div> 
+        <div class="text_field street" id="exp_date">
+            <input type="text" name="expiration date" required>
+            <span></span>
+            <label>Exp. date</label>
+        </div>
+        <div class="text_field street" id="cvc">
+            <input type="text" name="cvc" required>
+            <span></span>
+            <label>CVC</label>
+        </div>
+        <a href="{% url 'checkout-review-info'%}">
+        <input type="submit" value="Proceed to Payment">
+        </a>
+    <!-- </form> -->
+</div>
+
+            <!-- <input type="submit" value="Confirm information"> -->
+    </div>
+
+<script>
+// Get the form element
+const form = document.querySelector('form');
+
+// Add event listener for form submission
+form.addEventListener('submit', function(event) {
+  // Get the house number and postal code values
+  const houseNumberInput = document.querySelector('input[name="number"]');
+  const postalCodeInput = document.querySelector('input[name="postal_code"]');
+  const houseNumber = houseNumberInput.value.trim();
+  const postalCode = postalCodeInput.value.trim();
+
+  // Validate house number
+  if (isNaN(houseNumber)) {
+    // Display error message for invalid house number
+    houseNumberInput.classList.add('error');
+    event.preventDefault();
+  } else {
+    // Remove error message if present
+    houseNumberInput.classList.remove('error');
+  }
+
+  // Validate postal code
+  if (isNaN(postalCode) || postalCode.length !== 3) {
+    // Display error message for invalid postal code
+    postalCodeInput.classList.add('error');
+    event.preventDefault();
+  } else {
+    // Remove error message if present
+    postalCodeInput.classList.remove('error');
+  }
+});
+
+
+</script>
+{% endblock content %}
