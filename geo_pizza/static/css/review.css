@@ -1,0 +1,33 @@
+.title {
+    text-align: center ;
+}
+.title h1 {
+    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    margin-top: 15%;
+}
+
+.contact_info h1 {
+    border-bottom: none;
+}
+
+.center {
+    background-color:  bisque;
+    padding: 2rem 4rem 4rem 4rem;
+    width: 45%;
+    border-radius: 20px;
+}
+
+.text_field {
+    font-size: 20px;
+    text-align: left;
+}
+
+label {
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+.filled_out_info {
+    float: right;
+}

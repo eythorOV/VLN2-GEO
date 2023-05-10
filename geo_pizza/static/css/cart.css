@@ -154,6 +154,20 @@ th {
     font-weight: bold;
     text-shadow: 1px 1px black;
 }
+
+.delete_button {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+}
+
+.delete_button:hover {
+    background-color: #e44c5d;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    transition: .3s;
+}
 /* tr:nth-child(even) {
     background-color: #f2f2f2;
 } */
