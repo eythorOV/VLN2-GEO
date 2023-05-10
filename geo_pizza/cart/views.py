@@ -6,4 +6,4 @@ def index(request):
     return render(request, 'cart/cart.html')
 
 def checkout(request):
-    return render(request, 'cart/checkout.html', {'title': 'Checkout - Contact Info'})
+    return render(request, 'cart/contact.html', {'title': 'Checkout - Contact Info'})
