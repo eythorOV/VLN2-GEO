@@ -4,12 +4,13 @@ body {
 }
 
 .center {
-    background-color: bisque;
     position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50rem;
     height: 60rem;
-    border-radius: 10px;
-    margin-top: 15rem;
+    border-radius: 10px;;
 }
 
 .center h1 {
