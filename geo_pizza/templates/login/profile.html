@@ -10,12 +10,17 @@
 
         <div class="description_container">
             <p class="paragraph_description">
-                Hi {{user.first_name}} {{user.last_name}}, hope your having a good day!
+                {% if user.profile.first_name == "" %}
+                    Hi {{user.first_name}} {{user.last_name}}, hope your having a good day!
+                {% else %}
+                    Hi {{user.profile.first_name}} {{user.profile.last_name}}, hope your having a good day!
+                {% endif %}
                 <br>
                 <br>
                 You can change your profile picture by clicking on the choose file button below the image.
                 You can also change your name by writing the new name in the text box below and clicking the change name button.
             </p>
+
             <div class="text_field" id="first_name">
                 <input type="text" name="firstname" required>
                 <span></span>

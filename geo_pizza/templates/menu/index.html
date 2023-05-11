@@ -22,14 +22,10 @@
     </div>
     
     <div class="menu_container">
-
-
             {% for pizza in pizzas %}
                     {% include 'menu/single_pizza.html' with pizza=pizza %}
             {% endfor %}
-        
+    </div>
 
-
-      </div>
       <script src="{% static 'js/menu.js' %}"></script>
 {% endblock %}
