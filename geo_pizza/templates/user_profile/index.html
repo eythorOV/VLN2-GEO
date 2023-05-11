@@ -6,20 +6,31 @@
 
 <div class="left">
     <div class="about_us_info">
-        <h2 class="our_story">Welcome {{user.name}}</h2>
+        <h2 class="our_story">Welcome to your profile</h2>
 
         <div class="description_container">
             <p class="paragraph_description">
-                Text
-
+                Hi {{user.first_name}} {{user.last_name}}, hope your having a good day!
+                <br><br>
+                You can change your profile picture by clicking on the choose file button below the image.
+                You can also change your name by writing the new name in the text box below and clicking the change name button.
             </p>
+            <div class="text_field" id="first_name">
+                <input type="text" name="firstname" required>
+                <span></span>
+                <label>First name</label>
+            </div>
+            <div class="text_field" id="last_name">
+                <input type="text" name="lastname" required>
+                <span></span>
+                <label>Last name</label>
+            </div>
         </div>
     </div>
+    <input type="submit" value="Confirm change">
 </div>
 
 <div class="container">
-    <h1>Profil Image Upload 
-    </h1>
     <div class="avatar-upload">
         <div class="avatar-edit">
             <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -32,7 +43,7 @@
     </div>
 </div>
 
-    <script>
+<script>
         function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();

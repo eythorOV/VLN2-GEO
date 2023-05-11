@@ -99,10 +99,6 @@ input[type="submit"]:hover {
     text-decoration: none;
 }
 
-.country_selector {
-    color: #adadad;
-    padding-top: -4rem;
-}
 #exp_date,
 #cvc {
     width: 45%;

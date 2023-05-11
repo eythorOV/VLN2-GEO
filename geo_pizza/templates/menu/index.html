@@ -30,6 +30,7 @@
 
       </div>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script>
       // Get all filter buttons
       const filterButtons = document.querySelectorAll('.filter_button');
@@ -120,6 +121,52 @@ function searchPizzas(searchTerm) {
         }
     });
 }
+
+// $(document).ready(function() {
+//         // Retrieve the CSRF token from the cookie
+//         function getCookie(name) {
+//             var cookieValue = null;
+//             if (document.cookie && document.cookie !== '') {
+//                 var cookies = document.cookie.split(';');
+//                 for (var i = 0; i < cookies.length; i++) {
+//                     var cookie = cookies[i].trim();
+//                     // Does this cookie string begin with the name we want?
+//                     if (cookie.substring(0, name.length + 1) === (name + '=')) {
+//                         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+//                         break;
+//                     }
+//                 }
+//             }
+//             return cookieValue;
+//         }
+
+//         // Add to cart button click event
+//         $('.add_to_cart').click(function() {
+//             var pizzaId = $(this).closest('.block').data('pizza-id');
+//             var quantity = $(this).closest('.bottom_block').find('#quantity').val();
+
+//             // Send AJAX request to add the item to the cart
+//             $.ajax({
+//                 type: 'POST',
+//                 url: '/cart/',
+//                 data: {
+//                     'pizza_id': pizzaId,
+//                     'quantity': quantity,
+//                     'csrfmiddlewaretoken': getCookie('csrftoken')  // Include the CSRF token
+//                 },
+//                 success: function(response) {
+//                     // Handle the success response, e.g., display a success message
+//                     alert('Item added to the cart!');
+//                 },
+//                 error: function(xhr, errmsg, err) {
+//                     // Handle the error response, e.g., display an error message
+//                     console.log(xhr.status + ': ' + xhr.responseText);
+//                 }
+//             });
+//         });
+
+//         // Other JavaScript code for filtering and sorting pizzas
+//     });
 
     </script>      
 {% endblock %}
