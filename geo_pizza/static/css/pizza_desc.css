@@ -5,7 +5,7 @@ body {
 
 .pizza_title h1{
     text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
     margin-top: 15%;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .left .pizza_name {
     padding: 5rem 0 2rem 0;
-    border-bottom: 2px dashed grey;
+    border-bottom: 0.2rem dashed grey;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -38,7 +38,7 @@ body {
     margin-right: auto;
     width: 60%;
     padding: 2rem 0 0 0;
-    border-top: 2px dashed grey;
+    border-top: 0.2rem dashed grey;
 }
 
 .left .p_toppings {
@@ -93,14 +93,3 @@ body {
     width: 87%;
     border-radius: 10px;
 }
-
-/* .add_to_cart {
-    color: white;
-    font-weight: bold;
-
-}
-
-.add_to_cart:hover {
-    color: black;
-
-} */

@@ -7,8 +7,8 @@
 }
 
 .block {
-    width: 350px;
-    height: 350px;
+    width: 35rem;
+    height: 35rem;
     border-radius: 5%;
     margin: 0.5%;
   }
@@ -29,11 +29,11 @@
     margin-top: -70%;
     position: relative;
     z-index: 1;
-    margin-left: 140px;
+    margin-left: 14rem;
   }
 
   .menu_container {
-    margin-top: 150px;
+    margin-top: 15rem;
   }
 
 a.order_header {

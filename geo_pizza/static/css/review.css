@@ -2,7 +2,7 @@
     text-align: center ;
 }
 .title h1 {
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
     margin-top: 15%;
 }
 
@@ -17,7 +17,7 @@
     padding: 2rem 4rem 2rem 4rem;
     width: 48%;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 0.1rem solid black;
 }
 
 .payment_info {
@@ -27,11 +27,11 @@
     padding: 2rem 4rem 2rem 4rem;
     width: 48%;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 0.1rem solid black;
 }
 
 th, td {
-    padding: 25px;
+    padding: 2.5rem;
     text-align: center;
     font-weight: bold;
     text-align: center;
@@ -51,29 +51,27 @@ th {
     font-size: 17px;
     justify-content: center;
     background-color: white;
-    padding: 2px 10px 2px 10px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
 .cart_info {
     background-color:  bisque;
-    padding: 30px;
+    padding: 3rem;
     padding: 2rem 4rem 2rem 4rem;
     margin-top: 3rem;
     width: 85%;
     border-radius: 20px;
     display: inline-block;
     text-align: right;
-    border: 1px solid black;
+    border: 0.1rem solid black;
     margin-left: auto;
     margin-right: auto;
 
 }
 
 .table_info {
-    /* justify-content: center; */
     text-align: center;
     display: grid;
-    /* justify-content: center; */
 }
 
 .text_field {
@@ -82,7 +80,7 @@ th {
 
 label {
     font-size: 20px;
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
 }
 
@@ -91,7 +89,7 @@ label {
     font-size: 17px;
     float: right;
     background-color: white;
-    padding: 2px 10px 2px 10px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
 h3.cart_title {
@@ -121,9 +119,7 @@ h3.cart_title {
 }
 
 .titles th {
-    /* text-align: center; */
     justify-content: center;
-    /* display: flex; */
 }
 
 .total_price {
@@ -133,7 +129,5 @@ h3.cart_title {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
-    /* bottom: 0;
-    position: relative; */
 }
 

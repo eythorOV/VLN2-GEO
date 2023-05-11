@@ -11,7 +11,7 @@ body {
 .title_offers,
 .title_nutrit_ingred {
     text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
     margin-top: 15%;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .container-fluid {
     background-color: #e44c5d;
-    padding: 5px;
+    padding: 0.5rem;
     width: 80%;
     margin-top: 2rem;
     border-radius: 20px;

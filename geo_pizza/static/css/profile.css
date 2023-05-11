@@ -15,7 +15,7 @@ body {
 
 .left .our_story {
     padding: 5rem 0 2rem 0;
-    border-bottom: 2px dashed grey;
+    border-bottom: 0.2rem dashed grey;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -23,7 +23,7 @@ body {
 
 .left .paragraph_description {
     padding: 0.5rem 0 2rem 0;
-    border-bottom: 2px dashed grey;
+    border-bottom: 0.2rem dashed grey;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -38,8 +38,8 @@ body {
 
 .text_field input {
   width: 100%;
-  padding: 0 5px;
-  height: 40px;
+  padding: 0 0.5rem;
+  height: 4rem;
   font-size: 16px;
   border: none;
   background: none;
@@ -49,7 +49,7 @@ body {
 .text_field label {
   position: absolute;
   top: 50%;
-  left: 5px;
+  left: 0.5rem;
   color: #adadad;
   transform: translateY(-50%);
   font-size: 16px;
@@ -60,10 +60,10 @@ body {
 .text_field span::before{
   content: '';
   position: absolute;
-  top: 40px;
+  top: 4rem;
   left: 0;
   width: 0%;
-  height: 2px;
+  height: 0.2rem;
   background: #e44c5d;
   transition: .5s;
 }
@@ -82,8 +82,8 @@ body {
 input[type="submit"] {
   width: 40%;
   left: 25%;
-  height: 50px;
-  border: 1px solid;
+  height: 5rem;
+  border: 0.1rem solid;
   border-radius: 25px;
   background:  #e44c5d;
   background-size: 200%;
@@ -105,44 +105,44 @@ input[type="submit"]:hover {
 }
 
 .container {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 20px;
+  max-width: 96rem;
+  margin: 3rem auto;
+  padding: 2rem;
 }
 h1 {
-  font-size: 20px;
+  font-size: 2rem;
   text-align: center;
-  margin: 20px 0 20px;
+  margin: 2rem 0 2rem;
 }
 h1 small {
   display: block;
   font-size: 15px;
-  padding-top: 8px;
+  padding-top: 0.8rem;
   color: gray;
 }
 .avatar-upload {
   position: relative;
-  max-width: 205px;
-  margin: 50px auto;
+  max-width: 20.5rem;
+  margin: 5rem auto;
 }
 .avatar-upload .avatar-edit {
   position: absolute;
-  right: 12px;
+  right: 1.2rem;
   z-index: 1;
-  top: 10px;
+  top: 1rem;
 }
 .avatar-upload .avatar-edit input {
   display: none;
 }
 .avatar-upload .avatar-edit input + label {
   display: inline-block;
-  width: 34px;
-  height: 34px;
+  width: 3.4rem;
+  height: 3.4rem;
   margin-bottom: 0;
   border-radius: 100%;
   background: #FFFFFF;
-  border: 1px solid transparent;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  border: 0.1rem solid transparent;
+  box-shadow: 0rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.12);
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
@@ -156,19 +156,19 @@ h1 small {
   font-family: 'FontAwesome';
   color: #757575;
   position: absolute;
-  top: 10px;
+  top: 1rem;
   left: 0;
   right: 0;
   text-align: center;
   margin: auto;
 }
 .avatar-upload .avatar-preview {
-  width: 192px;
-  height: 192px;
+  width: 19.2rem;
+  height: 19.2rem;
   position: relative;
   border-radius: 100%;
-  border: 6px solid #F8F8F8;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border: 0.6rem solid #F8F8F8;
+  box-shadow: 0rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.1);
 }
 .avatar-upload .avatar-preview > div {
   width: 100%;
