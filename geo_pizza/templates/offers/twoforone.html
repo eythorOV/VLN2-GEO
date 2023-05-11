@@ -12,27 +12,29 @@
             <h2 class="pizza_name">{{twoforone.name}}</h2>
 
             <div class="description_container">
-                <p class="paragraph_description">
-                    {{twoforone.description}}
-                </p>
+                <p class="paragraph_description">{{twoforone.description}}</p>
+
                 <p class="special_sel_pizza">Select Pizza 1:</p>
                 <select name="pizza">
                     {% for pizza in pizzas %}
                     <option value="{{ pizza.id }}">{{ pizza.name }}</option>
                     {% endfor %}
                 </select>
+
                 <p class="special_two_sel_pizza">Select Pizza 2:</p>
                 <select name="pizza">
                     {% for pizza in pizzas %}
                     <option value="{{ pizza.id }}">{{ pizza.name }}</option>
                     {% endfor %}
                 </select>
+
             <p class="special_sel_soda">Select Soda:</p>
                 <select name="soda">
                     {% for soda in sodas %}
                       <option value="{{ soda.id }}">{{ soda.name }}</option>
                     {% endfor %}
                   </select>
+                  
                 <p class="paragraph_price">Price: {{twoforone.price}} ISK</p>
             </div>
 

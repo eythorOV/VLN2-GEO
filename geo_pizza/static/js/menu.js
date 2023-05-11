@@ -1,33 +1,50 @@
-// Get all filter buttons
-const filterButtons = document.querySelectorAll('.filter_button');
-      
-// Add event listener to each filter button
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const filterType = button.classList[1]; // Get the class name of the filter button
-
-        // Show or hide pizzas based on the selected filter
-        const pizzas = document.querySelectorAll('.block');
-        pizzas.forEach(pizza => {
-            const isSpicy = pizza.dataset.spicy === 'true';
-            const isVegan = pizza.dataset.vegan === 'true';
-            const isDesert = pizza.dataset.desert === 'true';
-            const isPopular = pizza.dataset.popular === 'true';
-
-            if (
-                filterType === 'all' ||
-                (filterType === 'spicy' && isSpicy) ||
-                (filterType === 'vegan' && isVegan) ||
-                (filterType === 'desert' && isDesert) ||
-                (filterType === 'popular' && isPopular)
-            ) {
-                pizza.style.display = 'block';
-            } else {
-                pizza.style.display = 'none';
-            }
+document.addEventListener("DOMContentLoaded", function() {
+    var filterButtons = document.querySelectorAll(".filter_button");
+    var pizzaItems = document.querySelectorAll(".block");
+  
+    // Add click event listener to each filter button
+    filterButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var filter = this.getAttribute("data-filter");
+  
+        // Remove the active class from all filter buttons
+        filterButtons.forEach(function(btn) {
+          btn.classList.remove("active");
         });
+  
+        // Add the active class to the clicked filter button
+        this.classList.add("active");
+  
+        // Show/hide pizza items based on the filter value
+        pizzaItems.forEach(function(item) {
+          var isSpicy = item.getAttribute("data-spicy") === "True";
+          var isVegan = item.getAttribute("data-vegan") === "True";
+          var isDesert = item.getAttribute("data-desert") === "True";
+          var isPopular = item.getAttribute("data-popular") === "True";
+  
+          if (
+            filter === "all" ||
+            (filter === "spicy" && isSpicy) ||
+            (filter === "vegan" && isVegan) ||
+            (filter === "desert" && isDesert) ||
+            (filter === "popular" && isPopular)
+          ) {
+            item.classList.remove("hide");
+          } else {
+            item.classList.add("hide");
+          }
+        });
+      });
     });
-});
+  
+    // Show all pizzas when the page loads
+    filterButtons[0].addEventListener("click", function() {
+      pizzaItems.forEach(function(item) {
+        item.classList.remove("hide");
+      });
+    });
+  });
+  
 
 // Get the name and price buttons
 const nameButton = document.getElementById('name');

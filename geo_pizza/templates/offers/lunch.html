@@ -12,21 +12,22 @@
             <h2 class="pizza_name">{{lunchoffer.name}}</h2>
 
             <div class="description_container">
-                <p class="paragraph_description">
-                    {{lunchoffer.description}}
-                </p>
+                <p class="paragraph_description">{{lunchoffer.description}}</p>
+
                 <p class="lunch_sel_pizza">Select Pizza:</p>
                     <select name="pizza">
                         {% for pizza in pizzas %}
                         <option value="{{ pizza.id }}">{{ pizza.name }}</option>
                         {% endfor %}
                     </select>
+
                 <p class="lunch_sel_soda">Select Soda:</p>
                     <select name="soda">
                         {% for soda in sodas %}
                           <option value="{{ soda.id }}">{{ soda.name }}</option>
                         {% endfor %}
                       </select>
+                      
                 <p class="paragraph_price">Price: {{lunchoffer.price}} ISK</p>
             </div>
 

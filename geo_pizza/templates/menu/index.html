@@ -10,11 +10,11 @@
         <button class="search_button">Search</button>
     </div>
     <div class="pizza_filter">
-        <button class="filter_button all" data-all="all">All</button>
-        <button class="filter_button spicy" data-spicy="spicy">Spicy</button>
-        <button class="filter_button vegan" data-vegan="vegan">Vegan</button>
-        <button class="filter_button desert" data-desert="desert">Desert</button>
-        <button class="filter_button popular" data-popular="popular">Popular</button>
+        <button class="filter_button all" data-filer="all">All</button>
+        <button class="filter_button spicy" data-filter="spicy">Spicy</button>
+        <button class="filter_button vegan" data-filter="vegan">Vegan</button>
+        <button class="filter_button desert" data-filter="desert">Desert</button>
+        <button class="filter_button popular" data-filter="popular">Popular</button>
         <span class="order_by">Order by:
             <button class="order_button" id="name">Name</button>
             <button class="order_button" id="price">Price</button>
@@ -23,9 +23,11 @@
     
     <div class="menu_container">
 
-        {% for pizza in pizzas %}
-            {% include 'menu/single_pizza.html' with pizza=pizza %}
-        {% endfor %}
+
+            {% for pizza in pizzas %}
+                    {% include 'menu/single_pizza.html' with pizza=pizza %}
+            {% endfor %}
+        
 
 
       </div>
