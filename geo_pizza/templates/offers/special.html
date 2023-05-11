@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/pizza_desc.css' %}">
+    <div class="pizza_title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="left">
+        <div class="pizza_info">
+            <h2 class="pizza_name">{{specialoffer.name}}</h2>
+
+            <div class="description_container">
+                <p class="paragraph_description">
+                    {{specialoffer.description}}
+                </p>
+                <p class="paragraph_price">Price: {{specialoffer.price}} ISK</p>
+            </div>
+
+            <div class="quantity_cart">
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                <button class="add_to_cart">Add to cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <img class="pizza_img" src="{{specialoffer.image}}" alt="{{specialoffer.name}}">
+    </div>
+{% endblock %}

@@ -1,3 +1,46 @@
 from django.db import models
+from menu.models import Pizza
 
-# Create your models here.
+class Sodas(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.CharField(max_length=255)
+    def str(self):
+        return self.name
+
+class Breadsticks(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.CharField(max_length=255)
+    def str(self):
+        return self.name
+
+class SpecialOffer(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.IntegerField()
+    image = models.CharField(max_length=255)
+    pizzas = models.ForeignKey(Pizza, on_delete=models.CASCADE, null=True, blank=True)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
+    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE, null=True, blank=True)
+    def str(self):
+        return self.name
+
+class LunchOffer(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.IntegerField()
+    image = models.CharField(max_length=255)
+    pizzas = models.ForeignKey(Pizza, on_delete=models.CASCADE, null=True, blank=True)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
+    def str(self):
+        return self.name
+
+class TwoForOne(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.IntegerField()
+    image = models.CharField(max_length=255)
+    pizzas = models.ManyToManyField(Pizza)
+    soda = models.ForeignKey(Sodas, on_delete=models.CASCADE, null=True, blank=True)
+    breadsticks = models.ForeignKey(Breadsticks, on_delete=models.CASCADE, null=True, blank=True)
+    def str(self):
+        return self.name

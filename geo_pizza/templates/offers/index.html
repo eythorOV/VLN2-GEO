@@ -1,5 +1,3 @@
-
-
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
@@ -8,51 +6,54 @@
     <div class="offer_container">
 
         <div class="block">
-             <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
-             <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+            <a href="/offers/specialoffer">
+             <img class="pizza_img" src="{{specialoffer.image}}" alt="Margherita pizza image"></a>
 
             <div class="inner_block">
-                <h2 id="pizza_name">Lunch Offer</h2>
-                <p id="pizza_description">Select a pizza from the menu and a soda</p>
-                <p id="pizza_price">Price: 3990 ISK</p>
+                <h2 id="pizza_name">{{specialoffer.name}}</h2>
+                <p id="pizza_description">{{specialoffer.description}}</p>
+                <p id="pizza_price">Price: {{specialoffer.price}} ISK</p>
 
                 <div class="bottom_block">
-                    <button class="add_to_cart">Select offer</button>
+                    <a href="/offers/specialoffer"><button class="add_to_cart">Select offer</button></a>
                 </div>
 
-            </div>    
+            </div>  
+        </a>  
         </div>
 
         <div class="block">
-            <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
-            <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+            <a href="/offers/lunchoffer">
+            <img class="pizza_img" src="{{lunchoffer.image}}" alt="Margherita pizza image"></a>
 
            <div class="inner_block">
-               <h2 id="pizza_name">Lunch Offer</h2>
-               <p id="pizza_description">Select a pizza from the menu and a soda</p>
-               <p id="pizza_price">Price: 3990 ISK</p>
+               <h2 id="pizza_name">{{lunchoffer.name}}</h2>
+               <p id="pizza_description">{{lunchoffer.description}}</p>
+               <p id="pizza_price">Price: {{lunchoffer.price}} ISK</p>
 
                <div class="bottom_block">
-                   <button class="add_to_cart">Select offer</button>
-               </div>
+                <a href="/offers/lunchoffer"><button class="add_to_cart">Select offer</button></a>
+            </div>
 
-           </div>    
+           </div>  
+        </a>  
        </div>
 
        <div class="block">
-            <img class="pizza_img" src="{% static '/images/pizzas/pizza-1.jpg' %}" alt="Margherita pizza image"></a>
-            <img class="soda_img" src="{% static '/images/sodas/happy_soda.png' %}" alt="Happy soda"></a>
+            <a href="/offers/twoforone">
+                <img class="pizza_img" src="{{twoforone.image}}" alt="Margherita pizza image"></a>
 
-            <div class="inner_block">
-                <h2 id="pizza_name">Lunch Offer</h2>
-                <p id="pizza_description">Select a pizza from the menu and a soda</p>
-                <p id="pizza_price">Price: 3990 ISK</p>
+                <div class="inner_block">
+                    <h2 id="pizza_name">{{twoforone.name}}</h2>
+                    <p id="pizza_description">{{twoforone.description}}</p>
+                    <p id="pizza_price">Price: {{twoforone.price}} ISK</p>
 
-                <div class="bottom_block">
-                    <button class="add_to_cart">Select offer</button>
-                </div>
+                    <div class="bottom_block">
+                        <a href="/offers/twoforone"><button class="add_to_cart">Select offer</button></a>
+                    </div>
 
-            </div>    
+                </div>   
+            </a> 
         </div>
     
     </div>

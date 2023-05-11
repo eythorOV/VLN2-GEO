@@ -22,17 +22,13 @@
     margin-left: 2rem;
   }
 
-.block .soda_img {
-    width: 30%;
-    height: 30%;
-    margin-top: 1rem;
-    transform: rotate(315deg);
-}
-
 .block .pizza_img {
-    width: 40%;
-    height: 40%;
-    margin-left: 4rem;
+    width: 70%;
+    height: 55%;;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    border-radius: 10px;
 }
 
 .inner_block {
@@ -43,6 +39,7 @@
     border-radius: 18px;
 	padding-left: 5px;
 	background-color: #e44c5d;
+    cursor: default;
 }
 
 .inner_block h2 {
