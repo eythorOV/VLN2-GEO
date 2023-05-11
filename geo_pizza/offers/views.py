@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import SpecialOffer, LunchOffer, TwoForOne, Sodas, Breadsticks
-
+from menu.models import Pizza
 
 # Create your views here.
 
@@ -18,26 +18,47 @@ def index(request):
     }
     return render(request, 'offers/index.html', context)
 
+from django.shortcuts import render
+from .models import SpecialOffer, LunchOffer, TwoForOne, Pizza, Sodas
+
 def special(request):
-    specialoffer = SpecialOffer.objects.first()  # Retrieve the special offer object
+    pizzas = Pizza.objects.all()
+    sodas = Sodas.objects.all()  # Retrieve all sodas
+    breadsticks = Breadsticks.objects.all()  # Retrieve all breadsticks
+    specialoffer = SpecialOffer.objects.first()
     context = {
         'title': 'Offer - Special',
-        'specialoffer': specialoffer
+        'specialoffer': specialoffer,
+        'pizzas': pizzas,
+        'sodas': sodas,
+        'breadsticks': breadsticks
     }
     return render(request, 'offers/special.html', context)
 
 def lunch(request):
-    lunchoffer = LunchOffer.objects.first()  # Retrieve the lunch offer object
+    pizzas = Pizza.objects.all()
+    sodas = Sodas.objects.all()  # Retrieve all sodas
+    lunchoffer = LunchOffer.objects.first()
     context = {
         'title': 'Offer - Lunch',
-        'lunchoffer': lunchoffer
+        'lunchoffer': lunchoffer,
+        'pizzas': pizzas,
+        'sodas': sodas
     }
     return render(request, 'offers/lunch.html', context)
 
 def twoforone(request):
-    twoforone = TwoForOne.objects.first()  # Retrieve the two-for-one offer object
+    pizzas = Pizza.objects.all()
+    sodas = Sodas.objects.all()  # Retrieve all sodas
+    breadsticks = Breadsticks.objects.all()  # Retrieve all breadsticks
+    twoforone = TwoForOne.objects.first()
     context = {
-        'title': 'Offer - Two For One',
-        'twoforone': twoforone
+        'title': 'Offer - Two for One',
+        'twoforone': twoforone,
+        'pizzas': pizzas,
+        'sodas': sodas,
+        'breadsticks': breadsticks
     }
     return render(request, 'offers/twoforone.html', context)
+
+

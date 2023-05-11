@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
     'offers.apps.OffersConfig',
-    'nutrition_ingredients.apps.NutritionIngredientsConfig',
     'login.apps.LoginConfig',
     'user_profile.apps.UserProfileConfig',
     'cart.apps.CartConfig',

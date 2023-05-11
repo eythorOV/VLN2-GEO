@@ -1,0 +1,27 @@
+
+.lunch_sel_pizza,
+.lunch_sel_soda,
+.special_sel_pizza,
+.special_sel_soda,
+.special_sel_breadsticks,
+.special_two_sel_pizza{
+    font-weight: bold;
+}
+
+.lunch_sel_pizza {
+    margin-top: 2rem;
+}
+
+select {
+    margin-bottom: 2rem;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 50%;
+}
+
+
+.special_sel_breadsticks,
+.special_sel_soda,
+.special_two_sel_pizza {
+    margin-top: -1rem;
+}

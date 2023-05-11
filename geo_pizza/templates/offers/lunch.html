@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/pizza_desc.css' %}">
+<link rel="stylesheet" href="{% static 'css/selected_offer.css' %}">
     <div class="pizza_title">
         <h1>{{ title }}</h1>
     </div>
@@ -14,11 +15,22 @@
                 <p class="paragraph_description">
                     {{lunchoffer.description}}
                 </p>
+                <p class="lunch_sel_pizza">Select Pizza:</p>
+                    <select name="pizza">
+                        {% for pizza in pizzas %}
+                        <option value="{{ pizza.id }}">{{ pizza.name }}</option>
+                        {% endfor %}
+                    </select>
+                <p class="lunch_sel_soda">Select Soda:</p>
+                    <select name="soda">
+                        {% for soda in sodas %}
+                          <option value="{{ soda.id }}">{{ soda.name }}</option>
+                        {% endfor %}
+                      </select>
                 <p class="paragraph_price">Price: {{lunchoffer.price}} ISK</p>
             </div>
 
             <div class="quantity_cart">
-                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                 <button class="add_to_cart">Add to cart</button>
             </div>
 
