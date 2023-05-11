@@ -32,8 +32,13 @@
 </div>
 <div class="right">
     <img src="{% static '/images/profile_img.png'%}" alt="Profile image">
+    <div class="text_field">
+        <input type="url" name="url_link">
+        <span></span>
+        <label>URL</label>
+    </div>
     <div>
-        <button>Edit image</button>
+        <input type="submit" value="Edit image">
     </div>
 </div>
 {% endblock %}
