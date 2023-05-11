@@ -14,5 +14,5 @@ def about_us(request):
 def locations(request):
     return render(request, 'home/locations.html', {'title': 'Our Locations'})
 
-def ing_nut(request):
-    return render(request, 'nutrition_ingredients/index.html', {'title': 'Ingredients & Nutritional Values'})
+def nutrition(request):
+    return render(request, 'nutrition/index.html', {'title': 'Nutritional Values of the Pizzas'})
