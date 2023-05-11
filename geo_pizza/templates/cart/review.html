@@ -40,21 +40,34 @@
     </div>
     <!-- <br> -->
     <div class="cart_info">
-        <table>
-            <h3 class="cart_title">Cart Info</h3>
-            <tr>
-                <th>Pizza name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-                <span class="quantity_filled_out">2</span>
-            <!-- <tr>
-                <td>Hawaiian</td>
-                <td class="quantity_filled_out">2</td>
-                <td>$30</td>
-            </tr> -->
-        </table>
+        <h3 class="cart_title">Cart Info</h3>
+        <div class="table_info">
+            <table>
+                <tr class="titles">
+                    <th>Pizza name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                    <!-- <span class="quantity_filled_out">2</span> -->
+                <tr>
+                    <td>Hawaiian</td>
+                    <td><span class="filled_out_info_quantity">2</span></td>
+                    <td>6000ISK</td>
+                </tr>
+                <tr>
+                    <td>Margherita</td>
+                    <td><span class="filled_out_info_quantity">3</span></td>
+                    <td>3000ISK</td>
+                </tr>
+                <tr>
+                    <td>Margherita con carne</td>
+                    <td><span class="filled_out_info_quantity">4</span></td>
+                    <td>4000ISK</td>
+                </tr>
+            </table>
+            <div class="total_price">Total Price: 13.000ISK</div>
+        </div>
     </div>
-    <a href="#"><button class="confirm_order">Confirm order!</button></a>
+    <a href="{% url 'home-index'%}"><button class="confirm_order">Confirm order!</button></a>
 </div>
 {% endblock content %}
