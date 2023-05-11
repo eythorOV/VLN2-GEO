@@ -11,7 +11,8 @@
         <div class="description_container">
             <p class="paragraph_description">
                 Hi {{user.first_name}} {{user.last_name}}, hope your having a good day!
-                <br><br>
+                <br>
+                <br>
                 You can change your profile picture by clicking on the choose file button below the image.
                 You can also change your name by writing the new name in the text box below and clicking the change name button.
             </p>
@@ -28,5 +29,11 @@
         </div>
     </div>
     <input type="submit" value="Confirm change">
+</div>
+<div class="right">
+    <img src="{% static '/images/profile_img.png'%}" alt="Profile image">
+    <div>
+        <button>Edit image</button>
+    </div>
 </div>
 {% endblock %}
