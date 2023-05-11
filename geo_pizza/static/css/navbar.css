@@ -75,7 +75,7 @@ a.navbar-brand-right:hover {
     }
 } */
 
-.top_logo .logo_navigation_bar {
+a.logo_navigation_bar {
     position: relative;
     z-index: 1;
     display: block;
@@ -86,4 +86,34 @@ a.navbar-brand-right:hover {
     margin-top: 45px;
     padding: 5px 0 5px;
     top: -9rem;
+}
+
+img.logo_navigation_bar {
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* top: -9rem; */
+    border-radius: 30%;
+    position: absolute;
+}
+
+img.logo_img {
+    border-radius: 30%;
+}
+
+.logo_img {
+    display: block;
+    margin-block: center;
+    margin-left: 47%;
+    margin-top: -5rem;
+}
+
+a.img_click {
+    /* display: grid; */
+    /* margin-top: 100px; */
+    padding: 0;
+    width: 5%;
+    justify-content: center;
+    text-align: center;
 }

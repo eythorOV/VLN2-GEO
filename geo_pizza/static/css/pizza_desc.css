@@ -61,13 +61,16 @@ body {
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 10px;
     border: none;
+    color: white;
+    transition: .3s;
 }
 
 .left button:hover {
     background-color: #e44c5d;
     transform: scale(1.1);
-    color: white;
+    color: black;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .left button:active {
@@ -90,3 +93,14 @@ body {
     width: 87%;
     border-radius: 10px;
 }
+
+/* .add_to_cart {
+    color: white;
+    font-weight: bold;
+
+}
+
+.add_to_cart:hover {
+    color: black;
+
+} */
