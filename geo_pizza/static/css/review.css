@@ -6,6 +6,10 @@
     margin-top: 15%;
 }
 
+h3 {
+    cursor: default;
+}
+
 .contact_title h1 {
     border-bottom: none;
 }
@@ -35,6 +39,7 @@ th, td {
     text-align: center;
     font-weight: bold;
     text-align: center;
+    cursor: default;
 }
 
 td {
@@ -52,6 +57,7 @@ th {
     justify-content: center;
     background-color: white;
     padding: 0.2rem 1rem 0.2rem 1rem;
+    cursor: default;
 }
 
 .cart_info {
@@ -95,6 +101,7 @@ label {
 h3.cart_title {
     display: flex;
     justify-content: center;
+    cursor: default;
 }
 
 .confirm_order {
@@ -129,5 +136,6 @@ h3.cart_title {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
+    cursor: default;
 }
 

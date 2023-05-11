@@ -3,10 +3,7 @@
     font-size: 18px;
     text-shadow: 2px 2px black;
     font-weight: bold;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     transition: .5s;
 }
 
@@ -24,7 +21,7 @@ a.navbar-brand:hover {
 
 a.navbar-brand-right {
     font-size: 18px;
-    margin-right: 15px;
+    margin-right: 1.5rem;
     text-shadow: 2px 2px black;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -48,8 +45,8 @@ button.navbar-brand-right:hover {
 }
 
 ul.navbar-right {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: white;
     text-align: right;
     margin-right: auto;
@@ -62,19 +59,6 @@ a.navbar-brand-right:hover {
     text-shadow: none;
 }
 
-/* .cart {
-    overflow: hidden;
-    width: 5rem;
-    height: 3rem;
-} */
-
-/* @media (min-width: 768px) {
-    .navbar-right {
-        float: right !important;
-        margin-right: -15px;
-    }
-} */
-
 a.logo_navigation_bar {
     position: relative;
     z-index: 1;
@@ -83,37 +67,18 @@ a.logo_navigation_bar {
     margin-right: auto;
     width: 5%;
     border-radius: 30%;
-    margin-top: 45px;
-    padding: 5px 0 5px;
+    margin-top: 4.5rem;
+    padding: 0.5rem 0rem 0.5rem;
     top: -9rem;
 }
 
 img.logo_navigation_bar {
     width: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    /* top: -9rem; */
     border-radius: 30%;
     position: absolute;
 }
 
-img.logo_img {
-    border-radius: 30%;
-}
-
 .logo_img {
-    display: block;
-    margin-block: center;
     margin-left: 47%;
     margin-top: -5rem;
-}
-
-a.img_click {
-    /* display: grid; */
-    /* margin-top: 100px; */
-    padding: 0;
-    width: 5%;
-    justify-content: center;
-    text-align: center;
 }
