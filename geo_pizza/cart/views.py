@@ -67,10 +67,10 @@ def payment_info(request):
     if request.method == 'POST':
         already_user = PaymentInfo.objects.filter(user=request.user).first()
         if not already_user:
-            card_holder_name = request.POST['card_holder_name']
-            card_number = request.POST['card_number']
-            expiration_date = request.POST['expiration_date']
-            cvv = request.POST['cvv']
+            card_holder_name = request.POST['name']
+            card_number = request.POST['cardnumber']
+            expiration_date = request.POST['expirationdate']
+            cvv = request.POST['cvc']
             user = request.user
             payment_info = PaymentInfo.objects.create(card_holder_name=card_holder_name, card_number=card_number, expiration_date=expiration_date, cvv=cvv, user=user)
             print('payment info created')
