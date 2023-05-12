@@ -113,8 +113,13 @@ img.logo_navigation_bar {
     margin-top: -5rem;
 }
 
-.profile_picture {
+img.profile_picture {
+    position: absolute;
+    /* bottom: 0.5%; */
+    top: 2.6rem;
+    left: 58%;
     border-radius: 50%;
-    width: 10%;
-    padding: 1rem 1rem 1rem 1rem;
+    width: 4%;
 }
+
+

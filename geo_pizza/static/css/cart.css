@@ -122,10 +122,17 @@ th {
 .bottom_box .total_price {
     float: right;
     width: 100%;
+    padding: 3rem 0 3.2rem 0;
     border: none;
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px black;
+}
+
+.total_price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
 }
 
 .delivery_price,
@@ -141,7 +148,7 @@ th {
     border: none;
     color: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .delete_all:hover {
@@ -150,7 +157,7 @@ th {
     color: black;
     text-shadow: none;
     text-decoration: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     transition: .5s;
 }
 
