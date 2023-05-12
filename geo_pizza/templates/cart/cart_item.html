@@ -5,7 +5,7 @@
         <td>{{cart_item.pizza.description}}</td>
         <td>{{cart_item.quantity}}</td>
         <td>{{cart_item.total_price}} ISK</td>
-        <td><a href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
+        <td><a class="delete_button" href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
     </tr>
 
 {% elif cart_item.product_type == 'Special_offer' %}
@@ -14,7 +14,7 @@
         <td>{{cart_item.special_offer.pizzas.name}}, {{cart_item.special_offer.soda.name}}, {{cart_item.special_offer.breadsticks.name}}</td>
         <td>{{cart_item.quantity}}</td>
         <td>{{cart_item.total_price}} ISK</td>
-        <td><a href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
+        <td><a class="delete_button" href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
     </tr>
 {% elif cart_item.product_type == 'Lunch_Offer' %}
     <tr>
@@ -22,7 +22,7 @@
         <td>{{cart_item.lunch_offer.pizzas.name}}, {{cart_item.lunch_offer.soda.name}}</td>
         <td>{{cart_item.quantity}}</td>
         <td>{{cart_item.total_price}} ISK</td>
-        <td><a href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
+        <td><a class="delete_button" href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
     </tr>
 {% elif cart_item.product_type == 'Twoforone_offer' %}
     <tr>
@@ -30,6 +30,6 @@
         <td>{{cart_item.two_for_one.pizza1.name}}, {{cart_item.two_for_one.pizza2.name}}, {{cart_item.two_for_one.soda.name}}</td>
         <td>{{cart_item.quantity}}</td>
         <td>{{cart_item.total_price}} ISK</td>
-        <td><a href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
+        <td><a class="delete_button" href="{% url 'delete_cart_item' cart_item.id %}">X</a></td>
     </tr>
 {% endif %}
