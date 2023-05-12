@@ -94,13 +94,11 @@ def payment_info(request):
 def review_page(request):
     cart = Cart.objects.get(user=request.user)
     cart_items = cart.cart_items.all()
-    context = { 'contactinfo': ContactInfo.objects.get(user=request.user),
-        'paymentinfo': PaymentInfo.objects.get(user=request.user),
-        'cart' : cart,
-        'cart_items': cart_items}
+    cart.calculate_total_price()
+    context = { 'contactinfo': ContactInfo.objects.get(user=request.user), 'paymentinfo': PaymentInfo.objects.get(user=request.user), 'cart' : cart, 'cart_items': cart_items,'title': 'Checkout - Review Info'}
     if request.method == 'POST':
         return redirect('checkout-complete')
-    return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
+    return render(request, 'cart/review.html', context)
 
 def complete(request):
     cart = Cart.objects.get(user=request.user)
