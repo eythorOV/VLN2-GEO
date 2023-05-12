@@ -28,13 +28,13 @@
                 <label>Cardholder: <span class="filled_out_info">{{user.paymentinfo.card_holder_name}}</span> </label>
             </div>
             <div class="text_field" id="last_name">
-                <label>Card number: <span class="filled_out_info">************{{user.paymentinfo.card_number[-4:]}}</span></label>
+                <label>Card number: <span class="filled_out_info">**** **** **** ****</span></label>
             </div> 
             <div class="text_field">
                 <label>Expiration date: <span class="filled_out_info">{{user.paymentinfo.expiration_date}}</span></label>
             </div>
             <div class="text_field">
-                <label> CVC: <span class="filled_out_info">{{user.paymentinfo.cvv}}</span></label>
+                <label> CVC: <span class="filled_out_info">***</span></label>
             </div>
         </form>
     </div>
@@ -49,11 +49,9 @@
                     <th>Price</th>
                 </tr>
                     <!-- <span class="quantity_filled_out">2</span> -->
-                <tr>
-                    <td>Hawaiian</td>
-                    <td><span class="filled_out_info_quantity">2</span></td>
-                    <td>6000ISK</td>
-                </tr>
+                {% for cart_item in cart_items %}
+                    {% include 'cart/review_cart.html' with cart_item=cart_item %}
+                {% endfor %}
                 <tr>
                     <td>Margherita</td>
                     <td><span class="filled_out_info_quantity">3</span></td>
