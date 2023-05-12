@@ -16,7 +16,7 @@ body {
   width: 50%;
   height: 50rem;
   float: right;
-  margin-top: 15rem;
+  margin-top: 20rem;
 }
 
 .left {
@@ -73,7 +73,7 @@ body {
   transition: .5s;
 }
 
-.text_field span::before{
+/* .text_field span::before{
   content: '';
   position: absolute;
   top: 4rem;
@@ -82,10 +82,10 @@ body {
   height: 0.2rem;
   background: #e44c5d;
   transition: .5s;
-}
+} */
 
-.text_field input:focus ~ label,
-.text_field input:valid ~ label {
+.text_field input ~ label,
+.text_field input ~ label {
   top: -10px;
   color: #e44c5d;
 }

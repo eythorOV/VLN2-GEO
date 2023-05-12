@@ -122,7 +122,12 @@ th {
     float: right;
     width: 100%;
     border: none;
-    background-color: #e44c5d;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+.delivery_price {
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px black;

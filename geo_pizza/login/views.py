@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User, auth
-# from login.forms import ProfileForm
+from cart.models import Cart
 from django.contrib import messages
 from login.models import Profile
 from django.contrib.auth.decorators import login_required
@@ -25,23 +25,24 @@ def signup(request):
         if User.objects.filter(username=username).exists():
             messages.warning(request, 'Username already exists')
             return redirect('sign_up')
-        
+
         if password1 != password2:
             messages.warning(request, 'Passwords do not match')
             return redirect('sign_up')
-        
+
         user = User.objects.create_user(username, email, password1)
         user.first_name = first_name
         user.last_name = last_name
         user.save()
-        
+
         user_login = auth.authenticate(username=username, password=password1)
         if user_login is not None:
             auth.login(request, user_login)
-            # cart = Cart.objects.create(user=user)
-            # cart.save()
+            cart = Cart.objects.create(user=user)
+            cart.save()
+            profile = Profile.objects.create(user=user, first_name=first_name, last_name = last_name, profile_picture ='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png')
             return redirect('home-index')
-    
+
     return render(request, 'login/sign_up.html')
 
 def login(request):
@@ -70,9 +71,8 @@ def login(request):
 @login_required(login_url='login-page')
 def profile(request):
     if request.method == 'POST':
-        print(request.POST)
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
+        first_name = request.POST['firstname']
+        last_name = request.POST['lastname']
         profile_picture = request.POST['profile_picture']
         if first_name == "":
             first_name = request.user.first_name
@@ -80,7 +80,10 @@ def profile(request):
             last_name = request.user.last_name
         if profile_picture == "":
             profile_picture = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-        profile = Profile.objects.filter(user=request.user).update(first_name=first_name, last_name=last_name, profile_picture=profile_picture)
+        profile = Profile.objects.get(user=request.user)
+        profile.first_name = first_name
+        profile.last_name = last_name
+        profile.profile_picture = profile_picture
         profile.save()
         return redirect('home-index')
     return render(request, 'login/profile.html')

@@ -101,13 +101,19 @@ input[type="submit"]:hover {
 
 #exp_date,
 #cvc {
-    width: 45%;
+    width: 49%;
     margin-top: 0;
+    margin-left: 1.5rem;
+}
+
+#cvc {
+    float: right;
+    margin-left: 5rem;
+    margin-right: -1.5rem;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly; 
     width: 100%;
-    margin-left: 0.1rem;
   }

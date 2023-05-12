@@ -92,4 +92,5 @@ body {
     align-items: center;
     width: 87%;
     border-radius: 10px;
+    mix-blend-mode: multiply;
 }
