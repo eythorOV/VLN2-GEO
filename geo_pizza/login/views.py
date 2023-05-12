@@ -39,7 +39,6 @@ def signup(request):
             cart.save()
             profile = Profile.objects.create(user=user, first_name=first_name, last_name = last_name, profile_picture ='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png')
             return redirect('home-index')
-    
     return render(request, 'login/sign_up.html')
 
 def login(request):

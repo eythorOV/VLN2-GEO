@@ -22,15 +22,11 @@
         <li><a href="{% url 'offers-index' %}">Offers</a></li> -->
         {% if user.is_authenticated %}
           <div>
-            <img class="profile_picture" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile picture">
+            <img class="profile_picture" src="{{user.profile.profile_picture}}" alt="Profile picture">
           </div>
-          {% if user.profile %}
-            <p>Hi {{user.profile.first_name}} {{user.profile.last_name}}</p>
-            {%else %}
-            <span class="user_profile">Hi {{user.first_name}} {{user.last_name}}</span>
+            <span class="user_profile">Hi {{user.profile.first_name}} {{user.profile.last_name}}</span>
             <a class="navbar-brand-right-logged" href="{% url 'profile' %}">Profile</a>
             <a class="navbar-brand-right-logged" href="{% url 'logout' %}">Logout</a>
-            {% endif %}
             {% else %}
             <a class="navbar-brand-right" href="{% url 'login-page' %}">Login</a>
             <a class="navbar-brand-right" href="{% url 'sign_up' %}">Sign up</a>

@@ -46,6 +46,7 @@
     <div class="right">
         <img class="pizza_img" src="{{lunchoffer.image}}" alt="{{lunchoffer.name}}">
     </div>
+{%endblock%}
 <script> function add_to_cart(event) {
         event.preventDefault();
         console.log('clicked');
@@ -82,4 +83,3 @@
         .then(data => console.log(data))
         .catch(error => console.error(error));}
     </script>
-    {% endblock %}
