@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/complete.css'%}">
+<div class="title">
+    <h1>{{ title }}</h1>
+    <div class="complete">
+        <div class="text_field">
+            <label>Thank you for choosing GEO Pizzahouse. 
+                We are excited to deliver a scrumptious pizza right to 
+                your doorstep. Your order will arive in 25-30 minutes.
+            </label>
+        </div>
+    </div>
+    <a href="{% url 'home-index'%}"><button class="home_button">Back to home</button></a>
+</div>
+
+{% endblock content %}

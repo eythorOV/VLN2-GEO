@@ -15,5 +15,5 @@ def review_page(request):
     return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
 
 def complete(request):
-    return render(request, 'cart/complete.html', {'title': 'Checkout - Complete'})
+    return render(request, 'cart/complete.html', {'title': 'Checkout - Order Complete'})
 
