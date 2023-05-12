@@ -110,17 +110,17 @@ img.logo_navigation_bar {
 
 .logo_img {
     margin-left: 47.5%;
-    margin-top: -5rem;
+    margin-top: -3rem;
 }
 
 img.profile_picture {
     position: absolute;
     /* bottom: 0.5%; */
     top: 2.6rem;
-    left: 54%;
+    left: 25%;
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
 }
 
 
