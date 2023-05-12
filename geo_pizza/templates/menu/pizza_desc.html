@@ -5,7 +5,6 @@
     <div class="pizza_title">
         <h1>{{ title }}</h1>
     </div>
-
     <div class="left">
         <div class="pizza_info">
             <h2 class="pizza_name">{{pizza.name}}</h2>
@@ -23,10 +22,10 @@
             </div>
             <form method="POST" id="pizza-form-{{pizza.id}}" data-product-type="pizza" data-product-id="{{pizza.id}}">
                 {% csrf_token %}
-            <div class="quantity_cart">
-                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-                <button class="add_to_cart">Add to cart</button>
-            </div>
+                <div class="bottom_block">
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                    <button onclick="add_to_cart(this, event)" class="add_to_cart" id="add_to_cart_btn" value="{{pizza.id}}">Add to cart</button>
+                </div>
             </form>
         </div>
     </div>
@@ -34,10 +33,8 @@
     <div class="right">
         <img class="pizza_img" src="{{pizza.image}}" alt="Margherita pizza image">
     </div>
-{% endblock %}
 
-<script>
-function add_to_cart(button, event) {
+<script>function add_to_cart(button, event) {
     event.preventDefault();
     console.log('clicked');
     const form = button.closest('form');
@@ -58,3 +55,4 @@ function add_to_cart(button, event) {
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }</script>
+{% endblock %}
