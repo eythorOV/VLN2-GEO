@@ -8,7 +8,7 @@
         <h3 class="contact_title">Contact Info</h3>
         <form action="{% url 'checkout-payment-info'%}" method="POST">
             <div class="text_field" id="first_name">
-                <label>Full name: <span class="filled_out_info">{{contactinfo.firstname}} {{contact.lastname}}</span> </label>
+                <label>Full name: <span class="filled_out_info">{{user.contactinfo.firstname}} {{user.contact.lastname}}</span> </label>
             </div>
             <div class="text_field" id="last_name">
                 <label>Address: <span class="filled_out_info">{{contactinfo.street}} {{contact.housenumber}}</span></label>
