@@ -82,25 +82,24 @@ function displaySortedPizzas(pizzas) {
     });
 }
 
-// Get the search input and search button
+// Get the search input
 const searchInput = document.getElementById('text_field');
-const searchButton = document.querySelector('.search_button');
 
-// Add event listener to the search button
-searchButton.addEventListener('click', () => {
-const searchTerm = searchInput.value.toLowerCase().trim();
-searchPizzas(searchTerm);
+// Add event listener to the search input
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    searchPizzas(searchTerm);
 });
 
 // Function to search and display pizzas based on the search term
 function searchPizzas(searchTerm) {
-const pizzas = document.querySelectorAll('.block');
-pizzas.forEach(pizza => {
-  const pizzaName = pizza.querySelector('#pizza_name').textContent.toLowerCase();
-  if (pizzaName.includes(searchTerm)) {
-      pizza.style.display = 'block';
-  } else {
-      pizza.style.display = 'none';
-  }
-});
+    const pizzas = document.querySelectorAll('.block');
+    pizzas.forEach(pizza => {
+        const pizzaName = pizza.querySelector('#pizza_name').textContent.toLowerCase();
+        if (pizzaName.includes(searchTerm)) {
+            pizza.style.display = 'block';
+        } else {
+            pizza.style.display = 'none';
+        }
+    });
 }
