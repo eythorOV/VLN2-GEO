@@ -2,20 +2,16 @@ document.addEventListener("DOMContentLoaded", function() {
     var filterButtons = document.querySelectorAll(".filter_button");
     var pizzaItems = document.querySelectorAll(".block");
   
-    // Add click event listener to each filter button
     filterButtons.forEach(function(button) {
       button.addEventListener("click", function() {
         var filter = this.getAttribute("data-filter");
   
-        // Remove the active class from all filter buttons
         filterButtons.forEach(function(btn) {
           btn.classList.remove("active");
         });
   
-        // Add the active class to the clicked filter button
         this.classList.add("active");
   
-        // Show/hide pizza items based on the filter value
         pizzaItems.forEach(function(item) {
           var isSpicy = item.getAttribute("data-spicy") === "True";
           var isVegan = item.getAttribute("data-vegan") === "True";
@@ -37,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   
-    // Show all pizzas when the page loads
     filterButtons[0].addEventListener("click", function() {
       pizzaItems.forEach(function(item) {
         item.classList.remove("hide");
@@ -46,11 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
 
-// Get the name and price buttons
+// Displays the name or price when either of the buttons are clicked
 const nameButton = document.getElementById('name');
 const priceButton = document.getElementById('price');
 
-// Add event listener to the name button
 nameButton.addEventListener('click', () => {
     const pizzas = document.querySelectorAll('.block');
     const sortedPizzas = Array.from(pizzas).sort((a, b) => {
@@ -61,7 +55,6 @@ nameButton.addEventListener('click', () => {
     displaySortedPizzas(sortedPizzas);
 });
 
-// Add event listener to the price button
 priceButton.addEventListener('click', () => {
     const pizzas = document.querySelectorAll('.block');
     const sortedPizzas = Array.from(pizzas).sort((a, b) => {
@@ -72,26 +65,23 @@ priceButton.addEventListener('click', () => {
     displaySortedPizzas(sortedPizzas);
 });
 
-// Helper function to display sorted pizzas
 function displaySortedPizzas(pizzas) {
     const menuContainer = document.querySelector('.menu_container');
-    menuContainer.innerHTML = ''; // Clear the current menu container
+    menuContainer.innerHTML = '';
 
     pizzas.forEach(pizza => {
         menuContainer.appendChild(pizza);
     });
 }
 
-// Get the search input
+// Search bar on the menu page, listening for input
 const searchInput = document.getElementById('text_field');
 
-// Add event listener to the search input
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
     searchPizzas(searchTerm);
 });
 
-// Function to search and display pizzas based on the search term
 function searchPizzas(searchTerm) {
     const pizzas = document.querySelectorAll('.block');
     pizzas.forEach(pizza => {
