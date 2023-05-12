@@ -38,6 +38,36 @@ button.navbar-brand-right {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+a.navbar-brand-right-logged {
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px black;
+    background-color: #e44c5d;
+    border: none;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: .5s;
+    margin-right: 1rem;
+}
+
+a.navbar-brand-right-logged:hover {
+    color: black;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+span.user_profile {
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px black;
+    background-color: #e44c5d;
+    border: none;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 1rem;
+    cursor: default;
+}
+
 button.navbar-brand-right:hover {
     color: black;
     text-decoration: none;
