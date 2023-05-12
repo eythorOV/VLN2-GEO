@@ -51,33 +51,52 @@ def contact_info(request):
     if request.method == 'POST':
         print('in post')
         already_user = ContactInfo.objects.filter(user=request.user).first()
+
+        # if not already_user:
+        print('not already user')
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        street = request.POST['street']
+        housenumber = request.POST['housenumber']
+        city = request.POST['city']
+        country = request.POST['country']
+        postalcode = request.POST['postalcode']
+        user = request.user
         if not already_user:
-            print('not already user')
-            firstname = request.POST['firstname']
-            lastname = request.POST['lastname']
-            street = request.POST['street']
-            housenumber = request.POST['housenumber']
-            city = request.POST['city']
-            country = request.POST['country']
-            postalcode = request.POST['postalcode']
-            user = request.user
             contact_info = ContactInfo.objects.create(firstname=firstname, lastname=lastname, street=street, housenumber=housenumber, city=city, country=country, postalcode=postalcode, user=user)
             print('contact info created')
-            return redirect('/checkout/payment/')
+        else:
+            already_user.firstname = firstname
+            already_user.lastname = lastname
+            already_user.street = street
+            already_user.housenumber = housenumber
+            already_user.city = city
+            already_user.country = country
+            already_user.postalcode = postalcode
+            already_user.save()
+            print('contact info updated')
+        return redirect('/checkout/payment/')
     return render(request, 'cart/contact.html', {'already_user': already_user, 'title': 'Checkout - Contact Info'})
 
 def payment_info(request):
+    already_user = PaymentInfo.objects.filter(user=request.user).first()
     if request.method == 'POST':
-        already_user = PaymentInfo.objects.filter(user=request.user).first()
+        card_holder_name = request.POST['name']
+        card_number = request.POST['cardnumber']
+        expiration_date = request.POST['expirationdate']
+        cvv = request.POST['cvc']
+        user = request.user
         if not already_user:
-            card_holder_name = request.POST['name']
-            card_number = request.POST['cardnumber']
-            expiration_date = request.POST['expirationdate']
-            cvv = request.POST['cvc']
-            user = request.user
             payment_info = PaymentInfo.objects.create(card_holder_name=card_holder_name, card_number=card_number, expiration_date=expiration_date, cvv=cvv, user=user)
             print('payment info created')
-            return redirect('checkout-review-info')
+        else:
+            already_user.card_holder_name = card_holder_name
+            already_user.card_number = card_number
+            already_user.expiration_date = expiration_date
+            already_user.cvv = cvv
+            already_user.save()
+            print('payment info updated')
+        return redirect('checkout-review-info')
     return render(request, 'cart/payment.html', {'title': 'Checkout - Contact Info'})
 
 

@@ -8,38 +8,38 @@
   <form id="contactForm" method="post">
     {% csrf_token %}
     <div class="text_field">
-      <input type="text" name="firstname">
+      <input type="text" name="firstname" value="{{already_user.firstname|default:''}}">
       <span class="error" id="firstnameError"></span>
-      <label>{{already_user.firstname|default:'First name'}}</label>
+      <label>First name</label>
     </div>
 
     <div class="text_field">
-      <input type="text" name="lastname">
+      <input type="text" name="lastname" value="{{already_user.lastname|default:''}}">
       <span class="error" id="lastnameError"></span>
       <label>Last name</label>
     </div>
 
     <div class="text_field street">
-      <input type="text" name="street">
+      <input type="text" name="street" value="{{already_user.street|default:''}}">
       <span class="error" id="streetError"></span>
       <label>Street name</label>
     </div>
 
     <div class="text_field number">
-      <input type="text" name="housenumber">
+      <input type="text" name="housenumber" value="{{already_user.housenumber|default:''}}">
       <span class="error" id="housenumberError"></span>
       <label>House number</label>
     </div>
 
     <div class="text_field">
-      <input type="text" name="city">
+      <input type="text" name="city" value="{{already_user.city|default:''}}">
       <span class="error" id="cityError"></span>
       <label>City</label>
     </div>
 
         <label class="country_selector" for="country">Country</label>     
         
-        <select id="country" name="country" class="form-control" >
+        <select id="country" name="country" class="form-control" value="{{already_user.country|default:''}}">
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -287,7 +287,7 @@
         </select>
 
         <div class="text_field">
-            <input type="text" name="postalcode">
+            <input type="text" name="postalcode" value="{{already_user.postalcode|default:''}}">
             <span class="error" id="postalcodeError"></span>
             <label>Postal code</label>
         </div>
