@@ -13,7 +13,7 @@ body {
     margin-top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 40rem;
     border-radius: 10px;
   }
 
@@ -26,27 +26,32 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    border-bottom: 2px solid rgba(155, 155, 155, 0.5);
+    border-bottom: 0.2rem solid rgba(155, 155, 155, 0.5);
 }
   
 .box {
     background-color: #e44c5d;
     color: white;
-    border: 1px solid black;
+    border: 0.1rem solid black;
     font-size: 16px;
     border-radius: 10px;
-    margin: 0 315px 200px 295px;
+    margin: 0 31.5rem 20rem 29.5rem;
     cursor: pointer;
   }
 
 .box a {
     display: block;
-    padding: 20px 30px 20px 30px;
+    padding: 2rem 3rem 2rem 3rem;
+    color: white;
+    transition: .5s;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
 }
 
 .box a:hover {
-    color: white;
+    color: black;
     text-decoration: none;
+    text-shadow: none;
 }
 
 img {

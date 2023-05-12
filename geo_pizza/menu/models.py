@@ -17,6 +17,7 @@ class Pizza(models.Model):
     popular = models.BooleanField()
     image = models.CharField(max_length=255)
     description = models.TextField()
+    long_description = models.TextField(null=True)
     toppings = models.ManyToManyField(Toppings)
 
     def __str__(self):

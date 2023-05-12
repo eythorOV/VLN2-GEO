@@ -1,0 +1,106 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100rem;
+}
+
+.center {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 60rem;
+    border-radius: 10px;;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 0 0 2rem 0;
+    border-bottom: 0.1rem solid silver;
+}
+
+.center {
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+
+.text_field {
+    position: relative;
+    background-color: white;
+    margin: 2rem 0;
+}
+
+.text_field input {
+    width: 100%;
+    padding: 0 0.5rem;
+    height: 4rem;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.text_field span::before{
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 0%;
+    height: 0.2rem;
+    background: #e44c5d;
+    transition: .5s;
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label {
+    top: -1rem;
+    color: #e44c5d;
+}
+
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    height: 5rem;
+    border: 0.1rem solid;
+    border-radius: 25px;
+    background:  #e44c5d;
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    border-color: #e44c5d;
+    transition: .5s;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.country_selector {
+    color: #adadad;
+    padding-top: -4rem;
+}

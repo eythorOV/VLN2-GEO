@@ -22,17 +22,13 @@
     margin-left: 2rem;
   }
 
-.block .soda_img {
-    width: 30%;
-    height: 30%;
-    margin-top: 1rem;
-    transform: rotate(315deg);
-}
-
 .block .pizza_img {
-    width: 40%;
-    height: 40%;
-    margin-left: 4rem;
+    width: 70%;
+    height: 55%;;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    border-radius: 10px;
 }
 
 .inner_block {
@@ -41,8 +37,19 @@
     width: 100%;
     height: 21rem;;
     border-radius: 18px;
-	padding-left: 5px;
+	padding-left: 0.5rem;
 	background-color: #e44c5d;
+    cursor: default;
+    transition: 0.5s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.inner_block:hover {
+    height: 25rem;
+    transition: 0.5s;
 }
 
 .inner_block h2 {
@@ -50,7 +57,7 @@
     padding: 0 0 1rem 0;
     text-align: center;
     color: white;
-    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+    border-bottom: dashed 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .inner_block #pizza_description {
@@ -58,7 +65,7 @@
     height: 4.5rem;
     text-align: center;
     color: white;
-    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+    border-bottom: dashed 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .inner_block #pizza_price {
@@ -83,9 +90,9 @@
 	bottom: 0rem;
     width: 100%;
     height: 5rem;
-    border-top: 2px solid black;
+    border-top: 0.2rem solid black;
     border-radius: 0 0 18px 18px;
-	padding-left: 5px;
+	padding-left: 0.5rem;
     margin: 0 0 0 -0.5rem;
 	background-color: white;
     cursor: default;
@@ -97,7 +104,7 @@
     cursor: pointer;
 }
 
-button {
+.add_to_cart {
     border: none;
     color: white;
     padding: 0.5rem 1rem;
@@ -107,4 +114,16 @@ button {
     border-radius: 1rem;
     margin: 0.5rem;
     cursor: pointer;
+}
+
+.add_to_cart:hover {
+    background-color: #e44c5d;
+    color: white;
+    transition: 0.5s;
+}
+
+.add_to_cart:active {
+    background-color: #48171d;
+    color: white;
+    transition: 0s;
 }

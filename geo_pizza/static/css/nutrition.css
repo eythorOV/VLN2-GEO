@@ -1,0 +1,18 @@
+
+
+.cart_table #two,
+.cart_table #four,
+.cart_table #six,
+.cart_table #eight,
+.cart_table #ten,
+.cart_table #twelve {
+    background-color: #dcdbdb;
+}
+
+.cart_table #three {
+    background-color: none;
+}
+
+th {
+    text-shadow: 1px 1px black;
+}

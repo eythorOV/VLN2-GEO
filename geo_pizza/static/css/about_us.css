@@ -7,7 +7,7 @@ body {
     text-align: center ;
 }
 .title h1 {
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
     margin-top: 15%;
 }
 
@@ -22,7 +22,7 @@ body {
 
 .left .our_story {
     padding: 5rem 0 2rem 0;
-    border-bottom: 2px dashed grey;
+    border-bottom: 0.2rem dashed grey;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -47,5 +47,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 87.5%;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
 }

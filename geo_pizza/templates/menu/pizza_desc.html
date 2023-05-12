@@ -9,7 +9,6 @@
     <div class="left">
         <div class="pizza_info">
             <h2 class="pizza_name">{{pizza.name}}</h2>
-
             <div class="description_container">
                 <p class="paragraph_description">
                     {{pizza.description}}
@@ -22,12 +21,13 @@
                 </p>
                 <p class="paragraph_price">Price: {{pizza.price}} ISK</p>
             </div>
-
+            <form method="POST" id="pizza-form-{{pizza.id}}" data-product-type="pizza" data-product-id="{{pizza.id}}">
+                {% csrf_token %}
             <div class="quantity_cart">
                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                 <button class="add_to_cart">Add to cart</button>
             </div>
-
+            </form>
         </div>
     </div>
 
@@ -35,3 +35,26 @@
         <img class="pizza_img" src="{{pizza.image}}" alt="Margherita pizza image">
     </div>
 {% endblock %}
+
+<script>
+function add_to_cart(button, event) {
+    event.preventDefault();
+    console.log('clicked');
+    const form = button.closest('form');
+    const productType = form.dataset.productType;
+    console.log(productType);
+    const productId = button.value;
+    console.log(productId);
+    const quantity = form.elements.quantity.value;
+    console.log(productType, productId, quantity);
+    const url = `/menu/add_to_cart/${productType}/${productId}/${quantity}`;
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}</script>

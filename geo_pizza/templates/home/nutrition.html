@@ -1,0 +1,110 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nutrition.css' %}">
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+    <h1 class="title_nutrit_ingred">{{ title }}</h1>    
+    <div class="nutrit_ingred">
+    </div>
+<div class="center">
+    <table class="cart_table">
+        <tr id="one">
+            <th>Pizza Name</th>
+            <th>Size (15&quot;)</th>
+            <th>Calories (kcal)</th>
+            <th>Fat (g)</th>
+            <th>Carbs (g)</th>
+            <th>Protein (g)</th>
+        </tr>
+        <tr id="two">
+            <td>Calabresa Pizza</td>
+            <td>15&quot;</td>
+            <td>2500-3500</td>
+            <td>100-150</td>
+            <td>250-350</td>
+            <td>100-150</td>
+        </tr>
+        <tr id="three">
+            <td>Dessert Pizza</td>
+            <td>15&quot;</td>
+            <td>2000-3000</td>
+            <td>80-120</td>
+            <td>250-350</td>
+            <td>30-60</td>
+        </tr>
+        <tr id="four">
+            <td>Hawaiian Pizza</td>
+            <td>15&quot;</td>
+            <td>2500-3500</td>
+            <td>100-150</td>
+            <td>250-350</td>
+            <td>80-120</td>
+        </tr>
+        <tr id="five">
+            <td>Magyaros Pizza</td>
+            <td>15&quot;</td>
+            <td>2000-3000</td>
+            <td>80-120</td>
+            <td>200-300</td>
+            <td>80-120</td>
+        </tr>
+        <tr id="six">
+            <td>Margherita Pizza</td>
+            <td>15&quot;</td>
+            <td>2000-3000</td>
+            <td>80-120</td>
+            <td>200-300</td>
+            <td>80-120</td>
+        </tr>
+        <tr id="seven">
+            <td>Muzzarella Pizza</td>
+            <td>15&quot;</td>
+            <td>2200-3200</td>
+            <td>90-140</td>
+            <td>220-320</td>
+            <td>90-140</td>
+        </tr>
+        <tr id="eight">
+            <td>Pepperoni Pizza</td>
+            <td>15&quot;</td>
+            <td>2500-3500</td>
+            <td>100-150</td>
+            <td>250-350</td>
+            <td>100-150</td>
+        </tr>
+        <tr id="nine">
+            <td>Teriyaki Mayo Pizza</td>
+            <td>15&quot;</td>
+            <td>2500-3500</td>
+            <td>100-150</td>
+            <td>250-350</td>
+            <td>80-120</td>
+        </tr>
+        <tr id="ten">
+            <td>Tom Yum Pizza</td>
+            <td>15&quot;</td>
+            <td>2000-3000</td>
+            <td>80-120</td>
+            <td>200-300</td>
+            <td>80-120</td>
+        </tr>
+        <tr id="eleven">
+            <td>Vegan Feast</td>
+            <td>15&quot;</td>
+            <td>2200-3200</td>
+            <td>90-140</td>
+            <td>200-300</td>
+            <td>100-150</td>
+        </tr>
+        <tr id="twelve">
+            <td>White Pizza</td>
+            <td>15&quot;</td>
+            <td>2000-3000</td>
+            <td>80-120</td>
+            <td>200-300</td>
+            <td>80-120</td>
+        </tr>
+    </table>
+    </div>
+{% endblock %}

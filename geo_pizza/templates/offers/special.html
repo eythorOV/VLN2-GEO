@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/pizza_desc.css' %}">
+<link rel="stylesheet" href="{% static 'css/selected_offer.css' %}">
+    <div class="pizza_title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="left">
+        <div class="pizza_info">
+            <h2 class="pizza_name">{{specialoffer.name}}</h2>
+
+            <div class="description_container">
+                <p class="paragraph_description">
+                    {{specialoffer.description}}
+                </p>
+
+                <p class="special_sel_pizza">Select Pizza:</p>
+                <select name="pizza" id="pizza-select">
+                    {% for pizza in pizzas %}
+                    <option value="{{ pizza.id }}">{{ pizza.name }}</option>
+                    {% endfor %}
+                </select>
+
+                <p class="special_sel_soda">Select Soda:</p>
+                <select name="soda" id="soda-select">
+                    {% for soda in sodas %}
+                      <option value="{{ soda.id }}">{{ soda.name }}</option>
+                    {% endfor %}
+                  </select>
+
+                <p class="special_sel_breadsticks">Select Breadsticks:</p>
+                <select name="breadsticks" id="breadsticks-select">
+                    {% for breadstick in breadsticks %}
+                    <option value="{{ breadstick.id }}">{{ breadstick.name }}</option>
+                    {% endfor %}
+                </select>
+                <p class="paragraph_price">Price: {{specialoffer.price}} ISK</p>
+            </div>
+            <form id="add-to-cart-form" method="POST" data-product-type="Special_offer">
+                {% csrf_token %}
+                <input type="hidden" name="pizza_id" id="pizza-id-input">
+                <input type="hidden" name="soda_id" id="soda-id-input">
+                <input type="hidden" name="breadstick_id" id="breadstick-id-input">
+            <div class="quantity_cart">
+                <button onclick="add_to_cart(event)" class="add_to_cart" id="add_to_cart_btn">Add to cart</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <img class="pizza_img" src="{{specialoffer.image}}" alt="{{specialoffer.name}}">
+    </div>
+<script> function add_to_cart(event) {
+    event.preventDefault();
+    console.log('clicked');
+    const pizzaSelect = document.getElementById('pizza-select');
+    const sodaSelect = document.getElementById('soda-select');
+    const breadsticksSelect = document.getElementById('breadsticks-select');
+    const pizzaIdInput = document.getElementById('pizza-id-input');
+    const sodaIdInput = document.getElementById('soda-id-input');
+    const breadstickIdInput = document.getElementById('breadstick-id-input');
+    const form = document.getElementById('add-to-cart-form');
+    if (!form || !pizzaSelect || !sodaSelect || !breadsticksSelect || !pizzaIdInput || !sodaIdInput || !breadstickIdInput) {
+        console.error('Form or input elements not found');
+        return;
+    }
+    const productType = form.dataset.productType;
+    console.log(productType);
+    const pizzaId = pizzaSelect.value;
+    console.log(pizzaId);
+    const sodaId = sodaSelect.value;
+    console.log(sodaId);
+    const breadstickId = breadsticksSelect.value;
+    console.log(breadstickId);
+    const url = `/offers/add_to_cart`;
+    const formData = new FormData();
+    formData.append('pizza_id', pizzaId);
+    formData.append('soda_id', sodaId);
+    formData.append('breadstick_id', breadstickId);
+    formData.append('product_type', productType);
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));}
+</script>
+{% endblock %}

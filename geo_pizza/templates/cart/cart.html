@@ -7,55 +7,27 @@
     <div class="center">
         <table class="cart_table">
             <tr>
-                <th>Pizza name</th>
+                <th>{{cart_items.}}</th>
+                <th>Description</th>
                 <th>Quantity</th>
                 <th>Price</th>
-                <th>Are you sure?</th>
+                <th>Delete item</th>
             </tr>
-            <tr>
-                <td>Hawaiian</td>
-                <td>2</td>
-                <td>$20</td>
-                <!-- <button>X</button> -->
+            {% for cart_item in cart_items %}
+                {% include 'cart/cart_item.html' with cart_item=cart_item %}
+            {% endfor %}
+            <tr class="bottom_box">
+                <td></td>
+                <td></td>
+                <td class="delivery_price">Delivery: Free</td>
+                <td class="total_price">Total price: {{cart.total_price}}ISK</td>
+                <td><a href="{% url 'delete_all_cart_items'%}">Delete all items</a></td>
+                
             </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <td>Pepperoni </td>
-                <td>1</td>
-                <td>$12</td>
-            </tr>
-            <tr>
-                <th class="total_price">Total price: 30$</th>
-            </tr>
-            <!-- Add more rows for each pizza item -->
         </table>
     </div>
     <div class="checkout_button">
-        <a href="#">Procced to checkout</a>
+        <a href="{% url 'checkout-contact-info'%}">Procced to checkout</a>
     </div>
     <div class="buy_more">
         <a href="{% url 'menu-index'%}">Buy more!</a>

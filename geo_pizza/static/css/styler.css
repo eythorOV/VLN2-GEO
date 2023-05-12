@@ -12,7 +12,7 @@ a {
 .title_offers,
 .title_nutrit_ingred {
     text-align: center;
-    border-bottom: solid 2px rgba(155, 155, 155, 0.5);
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
     margin-top: 15%;
 }
 
@@ -22,62 +22,12 @@ a {
 
 .container-fluid {
     background-color: #e44c5d;
-    padding: 15px;
+    padding: 1.5rem;
     width: 80%;
-    margin-top: 15px;
+    margin-top: 1.5rem;
     border-radius: 20px;
 }
 
 .navbar-bottom {
     background-color: #e44c5d;
 }
-
-
-/* MENU AND OFFER BOXES */
-/* .menu_container,
-.offer_container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    gap: 40px 30px;
-    padding: 10px;
-}
-
-.block {
-    width: 350px;
-    height: 350px;
-    background-color: lightgray;
-    border-radius: 5%;
-    margin: 0.5%
-  }
-
-.block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5%;
-  }
-
-.inner_block{
-    position: absolute;
-    width: 350px;
-    height: 200px;
-    top: 47%;
-    text-align: center;
-    background-color: #e44c5d;
-    color: white;
-    border-radius: 5%;
-    
-  }
-
-  #pizza_header {
-    margin: 3%;
-    font-size: 25px;
-    padding: 0.5%;
-    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
-  }
-
-  #pizza_desc {
-    padding: 0;
-    border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
-  } */
-/* END MENU AND OFFER BOXES */

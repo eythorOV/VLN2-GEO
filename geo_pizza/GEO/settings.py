@@ -38,13 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'playground',
     'home.apps.HomeConfig',
     'menu.apps.MenuConfig',
     'offers.apps.OffersConfig',
-    'nutrition_ingredients.apps.NutritionIngredientsConfig',
     'login.apps.LoginConfig',
-    'user_profile.apps.UserProfileConfig',
     'cart.apps.CartConfig',
 ]
 
@@ -86,7 +83,7 @@ WSGI_APPLICATION = 'GEO.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'geo-db',
+        'NAME': 'geo-db-1',
         'USER': 'geo-db-user',
         'PASSWORD': 'geosnillar123',
         'HOST': '34.28.158.116',
@@ -138,3 +135,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'login-page'
+LOGIN_REDIRECT_URL = 'home-index'

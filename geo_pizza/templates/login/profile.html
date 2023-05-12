@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<div class="left">
+    <div class="about_us_info">
+        <h2 class="our_story">Welcome to your profile</h2>
+
+        <div class="description_container">
+            <p class="paragraph_description">
+                Hi {{user.profile.first_name}} {{user.profile.last_name}}, hope your having a good day!
+                <br>
+                <br>
+                You can change your profile picture by clicking on the choose file button below the image.
+                You can also change your name by writing the new name in the text box below and clicking the change name button.
+            </p>
+
+            <form method="post">
+            {% csrf_token %}
+            <div class="text_field" id="first_name">
+                <input type="text" name="firstname" value="{{ user.profile.first_name }}" required>
+                <span></span>
+                <label>First name</label>
+            </div>
+            <div class="text_field" id="last_name">
+                <input type="text" name="lastname" value="{{ user.profile.last_name }}" required>
+                <span></span>
+                <label>Last name</label>
+            </div>
+            <input type="hidden" name="profile_picture" value="{{ user.profile.profile_picture }}">
+            <input type="submit" value="Confirm change">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="right">
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile image">
+    <div class="text_field">
+        <input type="url" name="url_link">
+        <span></span>
+        <label>URL</label>
+    </div>
+    <div>
+        <input type="submit" value="Edit image">
+    </div>
+</div>
+{% endblock %}

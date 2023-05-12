@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/review.css' %}">
+<div class="title">
+    <h1>{{ title }}</h1>
+    <div class="contact_info">
+        <h3 class="contact_title">Contact Info</h3>
+        <form action="{% url 'checkout-payment-info'%}" method="POST">
+            <div class="text_field" id="first_name">
+                <label>Full name: <span class="filled_out_info">Oliver Gabriel Figlarski</span> </label>
+            </div>
+            <div class="text_field" id="last_name">
+                <label>Address: <span class="filled_out_info">Háeyrarvellir 42</span></label>
+            </div> 
+            <div class="text_field">
+                <label>City: <span class="filled_out_info">Eyrarbakki, 820</span></label>
+            </div>
+            <div class="text_field">
+                <label>Country: <span class="filled_out_info">Ísland</span></label>
+            </div>
+        </form>
+    </div>
+    <div class="payment_info">
+        <h3 class="payment_title">Payment Info</h3>
+        <form action="{% url 'checkout-payment-info'%}" method="POST">
+            <div class="text_field" id="first_name">
+                <label>Cardholder: <span class="filled_out_info">Oliver Gabriel Figlarski</span> </label>
+            </div>
+            <div class="text_field" id="last_name">
+                <label>Card number: <span class="filled_out_info">**** **** **** 9892</span></label>
+            </div> 
+            <div class="text_field">
+                <label>Expiration date: <span class="filled_out_info">10/27</span></label>
+            </div>
+            <div class="text_field">
+                <label> CVC: <span class="filled_out_info">820</span></label>
+            </div>
+        </form>
+    </div>
+    <!-- <br> -->
+    <div class="cart_info">
+        <h3 class="cart_title">Cart Info</h3>
+        <div class="table_info">
+            <table>
+                <tr class="titles">
+                    <th>Pizza name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                    <!-- <span class="quantity_filled_out">2</span> -->
+                <tr>
+                    <td>Hawaiian</td>
+                    <td><span class="filled_out_info_quantity">2</span></td>
+                    <td>6000ISK</td>
+                </tr>
+                <tr>
+                    <td>Margherita</td>
+                    <td><span class="filled_out_info_quantity">3</span></td>
+                    <td>3000ISK</td>
+                </tr>
+                <tr>
+                    <td>Margherita con carne</td>
+                    <td><span class="filled_out_info_quantity">4</span></td>
+                    <td>4000ISK</td>
+                </tr>
+            </table>
+            <div class="total_price">Total Price: 13.000ISK</div>
+        </div>
+    </div>
+    <a href="{% url 'home'%}"><button class="confirm_order">Confirm order!</button></a>
+</div>
+{% endblock content %}

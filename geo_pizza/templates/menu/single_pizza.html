@@ -1,16 +1,39 @@
 {% load static %}
-
 <div class="block" href="home/" data-spicy="{{ pizza.spicy }}" data-vegan="{{ pizza.vegan }}" data-desert="{{ pizza.desert }}" data-popular="{{ pizza.popular }}">
     <a href="/menu/{{pizza.id}}">
-    <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}"></a>
-<div class="inner_block">
-    <h2 id="pizza_name">{{pizza.name}}</h2>
-    <p id="pizza_description">{{pizza.description}}</p>
-    <p id="pizza_price">Price: {{pizza.price}} ISK</p>
-    <div class="bottom_block">
-        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-        <button class="add_to_cart">Add to cart</button>
+        <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}">
+    <div class="inner_block">
+        <h2 id="pizza_name">{{pizza.name}}</h2>
+        <p id="pizza_description">{{pizza.description}}</p>
+        <p id="pizza_price">Price: {{pizza.price}} ISK</p>
+    </a>
+        <form method="POST" id="pizza-form-{{pizza.id}}" data-product-type="pizza" data-product-id="{{pizza.id}}">
+            {% csrf_token %}
+            <div class="bottom_block">
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                <button onclick="add_to_cart(this, event)" class="add_to_cart" id="add_to_cart_btn" value="{{pizza.id}}">Add to cart</button>
+            </div>
+        </form>
     </div>
-</div> 
-</a>   
 </div>
+<script>function add_to_cart(button, event) {
+    event.preventDefault();
+    console.log('clicked');
+    const form = button.closest('form');
+    const productType = form.dataset.productType;
+    console.log(productType);
+    const productId = button.value;
+    console.log(productId);
+    const quantity = form.elements.quantity.value;
+    console.log(productType, productId, quantity);
+    const url = `/menu/add_to_cart/${productType}/${productId}/${quantity}`;
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}</script>

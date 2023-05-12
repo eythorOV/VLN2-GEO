@@ -1,0 +1,51 @@
+.title {
+    text-align: center ;
+    justify-content: center;
+}
+.title h1 {
+    border-bottom: solid 0.2rem rgba(155, 155, 155, 0.5);
+    margin-top: 15%;
+}
+
+.complete {
+    height: 20%;
+    margin-top: 5rem;
+    background-color:  bisque;
+    padding: 4rem 6rem 4rem 6rem;
+    width: 60%;
+    border-radius: 20px;
+    border: 0.1rem solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text_field {
+    font-size: 20px;
+}
+
+.home_button {
+    width: 25%;
+    height: 5rem;
+    border: 0.1rem solid;
+    border-radius: 25px;
+    background:  #e44c5d;
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-size: 18px;
+    margin-top: 5rem;
+}
+
+.home_button:hover {
+    border-color: #e44c5d;
+    transition: .5s;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+
