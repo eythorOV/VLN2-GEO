@@ -6,29 +6,29 @@
 
 <div class="center">
   <h1>Payment Information</h1>
-    <!-- <form method="POST"> -->
+      <form>
         <div class="text_field" id="card_holder_name">
-            <input type="text" name="name" required>
-            <span></span>
-            <label>Name of card holder</label>
-        </div>
-        <div class="text_field" id="card_number">
-            <input type="text" name="card number" required>
-            <span></span>
-            <label>Credit card number</label>
-        </div> 
-        <div class="row">
-            <div class="text_field" id="exp_date">
-              <input type="text" name="expiration date" required>
+          <input type="text" name="name" id="cardHolderName" >
+          <span></span>
+          <label>Name of card holder</label>
+      </div>
+      <div class="text_field" id="card_number">
+          <input type="text" name="card number" id="cardNumber" >
+          <span></span>
+          <label>Credit card number</label>
+      </div>
+      <div class="row">
+          <div class="text_field" id="exp_date">
+              <input type="text" name="expiration date" id="expirationDate" >
               <span></span>
               <label>Exp. date (MM/YY)</label>
-            </div>
-            <div class="text_field" id="cvc">
-              <input type="text" name="cvc" required>
+          </div>
+          <div class="text_field" id="cvc">
+              <input type="text" name="cvc" id="cvcNumber" >
               <span></span>
               <label>CVC</label>
-            </div>
           </div>
+      </div>
         <a href="{% url 'checkout-review-info'%}">
         <input type="submit" value="Confirm Payment">
         </a>

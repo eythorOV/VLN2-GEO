@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
@@ -6,36 +5,40 @@
 
 <div class="center">
   <h1>Contact Information</h1>
-    <!-- <form method="POST"> -->
-        <div class="text_field" id="first_name">
-            <input type="text" name="firstname" required>
-            <span></span>
-            <label>First name</label>
-        </div>
-        <div class="text_field" id="last_name">
-            <input type="text" name="lastname" required>
-            <span></span>
-            <label>Last name</label>
-        </div> 
-        <div class="text_field street">
-            <input type="text" name="street" required>
-            <span></span>
-            <label>Street name</label>
-        </div>
-        <div class="text_field number" id="house_number">
-            <input type="text" name="housenumber" required>
-            <span></span>
-            <label>House number</label>
-        </div>
-        <div class="text_field">
-            <input type="text" name="city" required>
-            <span></span>
-            <label>City</label>
-        </div>
+  <form id="contactForm" method="post">
+    <div class="text_field">
+      <input type="text" name="firstname">
+      <span class="error" id="firstnameError"></span>
+      <label>First name</label>
+    </div>
+
+    <div class="text_field">
+      <input type="text" name="lastname">
+      <span class="error" id="lastnameError"></span>
+      <label>Last name</label>
+    </div>
+
+    <div class="text_field street">
+      <input type="text" name="street">
+      <span class="error" id="streetError"></span>
+      <label>Street name</label>
+    </div>
+
+    <div class="text_field number">
+      <input type="text" name="housenumber">
+      <span class="error" id="housenumberError"></span>
+      <label>House number</label>
+    </div>
+
+    <div class="text_field">
+      <input type="text" name="city">
+      <span class="error" id="cityError"></span>
+      <label>City</label>
+    </div>
 
         <label class="country_selector" for="country">Country</label>     
         
-        <select id="country" name="country" class="form-control" required>
+        <select id="country" name="country" class="form-control" >
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -283,52 +286,18 @@
         </select>
 
         <div class="text_field">
-            <input type="text" name="postal_code" required>
-            <span></span>
+            <input type="text" name="postalcode">
+            <span class="error" id="postalcodeError"></span>
             <label>Postal code</label>
         </div>
         <a href="{% url 'checkout-payment-info'%}">
         <input type="submit" href="{% url 'checkout-payment-info'%}" value="Proceed to Payment">
         </a>
-    <!-- </form> -->
+    </form>
 </div>
 
             <!-- <input type="submit" value="Confirm information"> -->
     </div>
 
-<script>
-// Get the form element
-const form = document.querySelector('form');
-
-// Add event listener for form submission
-form.addEventListener('submit', function(event) {
-  // Get the house number and postal code values
-  const houseNumberInput = document.querySelector('input[name="number"]');
-  const postalCodeInput = document.querySelector('input[name="postal_code"]');
-  const houseNumber = houseNumberInput.value.trim();
-  const postalCode = postalCodeInput.value.trim();
-
-  // Validate house number
-  if (isNaN(houseNumber)) {
-    // Display error message for invalid house number
-    houseNumberInput.classList.add('error');
-    event.preventDefault();
-  } else {
-    // Remove error message if present
-    houseNumberInput.classList.remove('error');
-  }
-
-  // Validate postal code
-  if (isNaN(postalCode) || postalCode.length !== 3) {
-    // Display error message for invalid postal code
-    postalCodeInput.classList.add('error');
-    event.preventDefault();
-  } else {
-    // Remove error message if present
-    postalCodeInput.classList.remove('error');
-  }
-});
-
-
-</script>
+    <script src="{% static 'js/contact_info.js' %}"></script>
 {% endblock content %}
