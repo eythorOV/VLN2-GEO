@@ -11,6 +11,18 @@ from django.shortcuts import render, redirect
 def index(request):
     return render(request, 'cart/cart.html')
 
+def delete_everything_after_review(request):
+    cart = Cart.objects.get(user=request.user)
+    cart_items = cart.cart_items.all()
+    cart_items.delete()
+    cart.total_price = 0
+    cart.save()
+    contact_info = ContactInfo.objects.get(user=request.user)
+    contact_info.delete()
+    payment_info = PaymentInfo.objects.get(user=request.user)
+    payment_info.delete()
+    return redirect('home-index')
+
 def get_cart(request):
     cart = Cart.objects.get(user=request.user)
     cart.calculate_total_price()
