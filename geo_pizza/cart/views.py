@@ -75,7 +75,7 @@ def payment_info(request):
             payment_info = PaymentInfo.objects.create(card_holder_name=card_holder_name, card_number=card_number, expiration_date=expiration_date, cvv=cvv, user=user)
             print('payment info created')
             return redirect('checkout-review-info')
-    return render(request, 'cart/contact.html', {'title': 'Checkout - Contact Info'})
+    return render(request, 'cart/payment.html', {'title': 'Checkout - Contact Info'})
 
 
 def review_page(request):
