@@ -2,15 +2,15 @@
 
 <div class="block" href="home/" data-spicy="{{ pizza.spicy }}" data-vegan="{{ pizza.vegan }}" data-desert="{{ pizza.desert }}" data-popular="{{ pizza.popular }}">
     <a href="/menu/{{pizza.id}}">
-    <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}"></a>
+    <img class="pizza_img" src="{{pizza.image}}" alt="{{pizza.name}}">
 <div class="inner_block">
     <h2 id="pizza_name">{{pizza.name}}</h2>
     <p id="pizza_description">{{pizza.description}}</p>
     <p id="pizza_price">Price: {{pizza.price}} ISK</p>
+    </a>
     <div class="bottom_block">
         <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
         <button class="add_to_cart">Add to cart</button>
     </div>
-</div> 
-</a>   
+</div>    
 </div>

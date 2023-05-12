@@ -127,7 +127,8 @@ th {
     text-shadow: 1px 1px black;
 }
 
-.delivery_price {
+.delivery_price,
+.delete_all {
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px black;

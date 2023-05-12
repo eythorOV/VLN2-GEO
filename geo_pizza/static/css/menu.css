@@ -68,7 +68,7 @@ button {
     margin-right: 5rem;
 }
 
-.order_button {
+.order_button{
     background-color: #f9f0dc;
     border: 1px solid black;
     color: black;
@@ -106,7 +106,7 @@ button {
     border-radius: 18px;
 	padding-left: 0.5rem;
 	background-color: #e44c5d;
-    cursor: default;
+    cursor: pointer;
 }
 
 .inner_block h2 {
@@ -182,6 +182,19 @@ button {
     background-color: #48171d;
     color: white;
     transition: 0s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.inner_block:hover {
+    height: 25rem;
+    transition: 0.5s;
+}
+
+.inner_block {
+    transition: 0.5s;
 }
 
 /* END MENU AND OFFER BOXES */
