@@ -8,29 +8,29 @@
       <form method="POST">
         {% csrf_token %}
         <div class="text_field" id="card_holder_name">
-          <input type="text" name="name" id="cardHolderName" value="{{ user.payment_info.name|default_if_none:'' }}" >
+          <input type="text" name="name" id="cardHolderName"  >
           <span></span>
           <label>Name of card holder</label>
       </div>
       <div class="text_field" id="card_number">
-          <input type="text" name="cardnumber" id="cardNumber" value="{{ user.payment_info.card_number|default_if_none:'' }}" >
+          <input type="text" name="cardnumber" id="cardNumber" >
           <span></span>
           <label>Credit card number</label>
       </div>
       <div class="row">
           <div class="text_field" id="exp_date">
-              <input type="text" name="expirationdate" id="expirationDate" value="{{ user.payment_info.expiration_date|default_if_none:'' }}" >
+              <input type="text" name="expirationdate" id="expirationDate" >
               <span></span>
               <label>Exp. date (MM/YY)</label>
           </div>
           <div class="text_field" id="cvc">
-              <input type="text" name="cvc" id="cvcNumber" value="{{ user.payment_info.cvc|default_if_none:'' }}" >
+              <input type="text" name="cvc" id="cvcNumber" >
               <span></span>
               <label>CVC</label>
           </div>
       </div>
         <a href="{% url 'checkout-review-info'%}">
-        <input type="submit" value="Confirm Payment">
+        <input type="submit">
         </a>
     </form>
 </div>
