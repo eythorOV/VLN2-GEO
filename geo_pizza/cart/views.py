@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'cart/cart.html')
 
-
+@login_required
 def get_cart(request):
     cart = Cart.objects.get(user=request.user)
     cart.calculate_total_price()
@@ -97,7 +97,7 @@ def payment_info(request):
             already_user.save()
             print('payment info updated')
         return redirect('checkout-review-info')
-    return render(request, 'cart/payment.html', {'title': 'Checkout - Contact Info'})
+    return render(request, 'cart/payment.html', {'already_user': already_user,'title': 'Checkout - Contact Info'})
 
 
 def review_page(request):
@@ -123,6 +123,7 @@ def complete(request):
     payment_info.delete()
     return render(request, 'cart/complete.html', {'title': 'Checkout - Complete'})
 
+@login_required
 def add_to_cart(request, product_id):
     product_type = 'Pizza'
     cart_item = CartItem.objects.filter(product_type=product_type, id=product_id).first()
