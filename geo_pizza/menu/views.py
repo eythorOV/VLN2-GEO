@@ -17,6 +17,7 @@ def get_pizza_by_id(request, id):
     }
     return render(request, 'menu/pizza_desc.html', context)
 
+@login_required
 def index(request):
     context = {
         'pizzas': Pizza.objects.all()}

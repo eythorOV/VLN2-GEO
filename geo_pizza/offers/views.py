@@ -14,6 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
+@login_required
 def index(request):
     specialoffer = SpecialOffer.objects.first()  # Retrieve the special offer object
     lunchoffer = LunchOffer.objects.first()  # Retrieve the lunch offer object
