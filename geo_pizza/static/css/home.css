@@ -1,7 +1,6 @@
 .pizzalogo {
     float: right;
     width: 40%;
-    /* width: 45rem; */
     border-radius: 10rem;
     margin-top: 3rem;
 }
@@ -16,7 +15,6 @@
 .block img {
     margin-top: 3rem;
     width: 44rem;
-    /* height: 100%; */
     object-fit: cover;
     border-radius: 1rem;
     opacity: 0.5;
@@ -25,7 +23,6 @@
   .inner_block {
     text-align: center;
     color: rgb(0, 0, 0);
-    /* margin-top: -25%; */
     margin-top: -70%;
     position: relative;
     z-index: 1;
