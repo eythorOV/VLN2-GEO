@@ -80,10 +80,11 @@ def payment_info(request):
 
 def review_page(request):
     cart = Cart.objects.get(user=request.user)
+    cart_items = cart.cart_items.all()
     context = { 'contactinfo': ContactInfo.objects.get(user=request.user),
         'paymentinfo': PaymentInfo.objects.get(user=request.user),
         'cart' : cart,
-        'cartitems': CartItem.objects.get(cart=cart)}
+        'cartitems': cart_items}
     return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
 
 def complete(request):
