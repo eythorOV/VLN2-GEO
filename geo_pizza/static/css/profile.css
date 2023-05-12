@@ -4,14 +4,19 @@ body {
 }
 
 .right img {
-  width: 60%;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 0.2rem solid black;
   border-radius: 50%;
 }
 
 .right {
-  float: right;
   text-align: center;
-  margin-top: 15%;
+  width: 50%;
+  height: 50rem;
+  float: right;
+  margin-top: 15rem;
 }
 
 .left {
