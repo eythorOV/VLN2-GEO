@@ -58,8 +58,8 @@ a.navbar-brand-right-logged:hover {
 
 span.user_profile {
     color: white;
-    font-size: 18px;
-    text-shadow: 2px 2px black;
+    font-size: 16px;
+    text-shadow: 1px 1px black;
     background-color: #e44c5d;
     border: none;
     font-weight: bold;
