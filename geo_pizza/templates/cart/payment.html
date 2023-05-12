@@ -5,7 +5,8 @@
 
 <div class="center">
   <h1>Payment Information</h1>
-      <form>
+      <form method="POST">
+        {% csrf_token %}
         <div class="text_field" id="card_holder_name">
           <input type="text" name="name" id="cardHolderName" >
           <span></span>

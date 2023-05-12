@@ -4,7 +4,7 @@ from menu.models import Pizza, Toppings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect
-from cart.models import Cart, CartItem
+from cart.models import Cart, CartItem, ContactInfo, PaymentInfo
 from offers.models import SpecialOffer, LunchOffer, TwoForOne
 from django.contrib.auth.models import User
 
@@ -18,7 +18,8 @@ def get_pizza_by_id(request, id):
     return render(request, 'menu/pizza_desc.html', context)
 
 def index(request):
-    context = { 'pizzas': Pizza.objects.all().order_by('name') }
+    context = {
+        'pizzas': Pizza.objects.all()}
     return render(request, 'menu/index.html', context)
 
 @login_required

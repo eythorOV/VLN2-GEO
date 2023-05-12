@@ -66,3 +66,25 @@ class CartItem(models.Model):
             return self.two_for_one.price * self.quantity
         else:
             return 0
+
+class ContactInfo(models.Model):
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    street = models.CharField(max_length=50)
+    housenumber = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    country = models.CharField(max_length=50)
+    postalcode = models.CharField(max_length=50)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.firstname} {self.lastname}'
+
+class PaymentInfo(models.Model):
+    card_holder_name = models.CharField(max_length=50)
+    card_number = models.CharField(max_length=50)
+    expiration_date = models.CharField(max_length=50)
+    cvv = models.CharField(max_length=50)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    def __str__(self):
+        return f'{self.card_holder_name} {self.card_number}'

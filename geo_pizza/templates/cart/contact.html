@@ -6,6 +6,7 @@
 <div class="center">
   <h1>Contact Information</h1>
   <form id="contactForm" method="post">
+    {% csrf_token %}
     <div class="text_field">
       <input type="text" name="firstname">
       <span class="error" id="firstnameError"></span>

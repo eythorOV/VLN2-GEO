@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.contrib import messages
-from cart.models import CartItem, Cart
+from cart.models import CartItem, Cart, ContactInfo, PaymentInfo
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 from django.shortcuts import render, redirect
@@ -44,12 +44,46 @@ def update_cart_item_quantity(request):
         return JsonResponse({'success': False})
 
 def contact_info(request):
+    print('in contact info')
+    if request.method == 'POST':
+        print('in post')
+        already_user = ContactInfo.objects.filter(user=request.user).first()
+        if not already_user:
+            print('not already user')
+            firstname = request.POST['firstname']
+            lastname = request.POST['lastname']
+            street = request.POST['street']
+            housenumber = request.POST['housenumber']
+            city = request.POST['city']
+            country = request.POST['country']
+            postalcode = request.POST['postalcode']
+            user = request.user
+            contact_info = ContactInfo.objects.create(firstname=firstname, lastname=lastname, street=street, housenumber=housenumber, city=city, country=country, postalcode=postalcode, user=user)
+            print('contact info created')
+            return redirect('/checkout/payment/')
     return render(request, 'cart/contact.html', {'title': 'Checkout - Contact Info'})
 
 def payment_info(request):
-    return render(request, 'cart/payment.html', {'title': 'Checkout - Payment Info'})
+    if request.method == 'POST':
+        already_user = PaymentInfo.objects.filter(user=request.user).first()
+        if not already_user:
+            card_holder_name = request.POST['card_holder_name']
+            card_number = request.POST['card_number']
+            expiration_date = request.POST['expiration_date']
+            cvv = request.POST['cvv']
+            user = request.user
+            payment_info = PaymentInfo.objects.create(card_holder_name=card_holder_name, card_number=card_number, expiration_date=expiration_date, cvv=cvv, user=user)
+            print('payment info created')
+            return redirect('checkout-review-info')
+    return render(request, 'cart/contact.html', {'title': 'Checkout - Contact Info'})
+
 
 def review_page(request):
+    cart = Cart.objects.get(user=request.user)
+    context = { 'contactinfo': ContactInfo.objects.get(user=request.user),
+        'paymentinfo': PaymentInfo.objects.get(user=request.user),
+        'cart' : cart,
+        'cartitems': CartItem.objects.get(cart=cart)}
     return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
 
 def complete(request):
