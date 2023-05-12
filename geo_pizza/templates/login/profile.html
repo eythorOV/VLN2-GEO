@@ -29,21 +29,17 @@
                 <span></span>
                 <label>Last name</label>
             </div>
-            <input type="hidden" name="profile_picture" value="{{ user.profile.profile_picture }}">
+            <div class="text_field">
+                <input type="text" name="profile_picture" value="{{ user.profile.profile_picture }}">
+                <span></span>
+                <label>URL</label>
+            </div>
             <input type="submit" value="Confirm change">
-            </form>
         </div>
+    </form>
     </div>
 </div>
 <div class="right">
-    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile image">
-    <div class="text_field">
-        <input type="url" name="url_link">
-        <span></span>
-        <label>URL</label>
-    </div>
-    <div>
-        <input type="submit" value="Edit image">
-    </div>
+    <img src="{{ user.profile.profile_picture }}" alt="Profile image">
 </div>
 {% endblock %}
