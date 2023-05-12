@@ -15,4 +15,4 @@ def locations(request):
     return render(request, 'home/locations.html', {'title': 'Our Locations'})
 
 def nutrition(request):
-    return render(request, 'nutrition/index.html', {'title': 'Nutritional Values of the Pizzas'})
+    return render(request, 'home/nutrition.html', {'title': 'Nutritional Values of the Pizzas'})
