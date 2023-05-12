@@ -28,7 +28,7 @@
                 <label>Cardholder: <span class="filled_out_info">{{user.paymentinfo.card_holder_name}}</span> </label>
             </div>
             <div class="text_field" id="last_name">
-                <label>Card number: <span class="filled_out_info">{{user.paymentinfo.card_number}}</span></label>
+                <label>Card number: <span class="filled_out_info">************{{user.paymentinfo.card_number[-4:]}}</span></label>
             </div> 
             <div class="text_field">
                 <label>Expiration date: <span class="filled_out_info">{{user.paymentinfo.expiration_date}}</span></label>
