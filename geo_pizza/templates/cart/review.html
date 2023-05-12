@@ -48,11 +48,10 @@
                     <th>Quantity</th>
                     <th>Price</th>
                 </tr>
-                    <!-- <span class="quantity_filled_out">2</span> -->
-                {% for cart_item in cart_items %}
+                {% for cart_item in user.cart_items %}
                     {% include 'cart/review_cart.html' with cart_item=cart_item %}
                 {% endfor %}
-                <tr>
+                <!-- <tr>
                     <td>Margherita</td>
                     <td><span class="filled_out_info_quantity">3</span></td>
                     <td>3000ISK</td>
@@ -61,7 +60,7 @@
                     <td>Margherita con carne</td>
                     <td><span class="filled_out_info_quantity">4</span></td>
                     <td>4000ISK</td>
-                </tr>
+                </tr> -->
             </table>
             <div class="total_price">Total Price: 13.000ISK</div>
         </div>
