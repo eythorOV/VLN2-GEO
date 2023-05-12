@@ -16,10 +16,11 @@ body {
     margin-right: auto;
     margin-left: auto;
     margin-top: 2rem;
-    width: 100rem;
+    width: 100%;
     background-color: white;
     text-align: center;
 }
+
 
 .center h1 {
     text-align: center;
