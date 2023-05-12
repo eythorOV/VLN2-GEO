@@ -27,7 +27,11 @@
         </table>
     </div>
     <div class="checkout_button">
-        <a href="{% url 'checkout-contact-info'%}">Proceed to checkout</a>
+        {% if cart_items %}
+            <a href="{% url 'checkout-contact-info'%}">Proceed to checkout</a>
+        {% else %}
+            <a href="{% url 'menu-index'%}">Your cart is empty!</a>
+        {% endif %}
     </div>
     <div class="buy_more">
         <a href="{% url 'menu-index'%}">Buy more!</a>

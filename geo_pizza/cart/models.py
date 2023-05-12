@@ -13,17 +13,12 @@ class Cart(models.Model):
     def calculate_total_price(self):
         total_price = 0
         for cart_item in self.cart_items.all():
-            print(cart_item.total_price())
             total_price += cart_item.total_price()
         self.total_price = total_price
         
         return total_price
 
     def save(self, *args, **kwargs):
-        # print('in Cart save')
-        # if self.cartitem_set.all():
-        #     print('cartitem_set exists')
-        #     self.total_price = self.calculate_total_price()
         super().save(*args, **kwargs)
 
 

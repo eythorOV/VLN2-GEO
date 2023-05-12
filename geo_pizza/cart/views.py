@@ -47,13 +47,8 @@ def update_cart_item_quantity(request):
 
 def contact_info(request):
     already_user = ContactInfo.objects.filter(user=request.user).first()
-    print('in contact info')
     if request.method == 'POST':
-        print('in post')
         already_user = ContactInfo.objects.filter(user=request.user).first()
-
-        # if not already_user:
-        print('not already user')
         firstname = request.POST['firstname']
         lastname = request.POST['lastname']
         street = request.POST['street']
@@ -64,7 +59,6 @@ def contact_info(request):
         user = request.user
         if not already_user:
             contact_info = ContactInfo.objects.create(firstname=firstname, lastname=lastname, street=street, housenumber=housenumber, city=city, country=country, postalcode=postalcode, user=user)
-            print('contact info created')
         else:
             already_user.firstname = firstname
             already_user.lastname = lastname
@@ -74,7 +68,6 @@ def contact_info(request):
             already_user.country = country
             already_user.postalcode = postalcode
             already_user.save()
-            print('contact info updated')
         return redirect('/checkout/payment/')
     return render(request, 'cart/contact.html', {'already_user': already_user, 'title': 'Checkout - Contact Info'})
 
@@ -88,14 +81,12 @@ def payment_info(request):
         user = request.user
         if not already_user:
             payment_info = PaymentInfo.objects.create(card_holder_name=card_holder_name, card_number=card_number, expiration_date=expiration_date, cvv=cvv, user=user)
-            print('payment info created')
         else:
             already_user.card_holder_name = card_holder_name
             already_user.card_number = card_number
             already_user.expiration_date = expiration_date
             already_user.cvv = cvv
             already_user.save()
-            print('payment info updated')
         return redirect('checkout-review-info')
     return render(request, 'cart/payment.html', {'already_user': already_user,'title': 'Checkout - Contact Info'})
 
@@ -131,10 +122,8 @@ def add_to_cart(request, product_id):
         cart_item.quantity += 1
         cart_item.save()
         messages.success(request, 'Item added to cart')
-        print('Item added to cart')
     else:
         if product_type == 'Pizza' or product_type == 'pizza':
-            print('Pizza')
             cart_item = CartItem(product_type=product_type, pizza_id=product_id)
         elif product_type == 'SpecialOffer':
             cart_item = CartItem(product_type=product_type, special_offer_id=product_id)
