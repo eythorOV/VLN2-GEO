@@ -171,6 +171,7 @@ th {
 .delete_button {
     border: none;
     background-color: white;
+    color: black;
     font-size: 18px;
     padding: 0rem 1rem 0rem 1rem;
 }

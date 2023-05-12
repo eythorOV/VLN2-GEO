@@ -58,8 +58,8 @@ a.navbar-brand-right-logged:hover {
 
 span.user_profile {
     color: white;
-    font-size: 18px;
-    text-shadow: 2px 2px black;
+    font-size: 16px;
+    text-shadow: 1px 1px black;
     background-color: #e44c5d;
     border: none;
     font-weight: bold;
@@ -110,16 +110,17 @@ img.logo_navigation_bar {
 
 .logo_img {
     margin-left: 47.5%;
-    margin-top: -5rem;
+    margin-top: -3rem;
 }
 
 img.profile_picture {
     position: absolute;
     /* bottom: 0.5%; */
     top: 2.6rem;
-    left: 54%;
+    left: 25%;
     border-radius: 50%;
-    width: 4%;
+    width: 6rem;
+    height: 6rem;
 }
 
 
