@@ -5,9 +5,10 @@ from cart.models import CartItem, Cart, ContactInfo, PaymentInfo
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
+@login_required
 def index(request):
     return render(request, 'cart/cart.html')
 
