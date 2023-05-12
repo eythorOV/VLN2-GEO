@@ -6,7 +6,8 @@ body {
 .right img {
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40rem;
+  height: 40rem;
   border: 0.2rem solid black;
   border-radius: 50%;
 }
