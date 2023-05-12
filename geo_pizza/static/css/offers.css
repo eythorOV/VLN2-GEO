@@ -40,6 +40,16 @@
 	padding-left: 0.5rem;
 	background-color: #e44c5d;
     cursor: default;
+    transition: 0.5s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.inner_block:hover {
+    height: 25rem;
+    transition: 0.5s;
 }
 
 .inner_block h2 {

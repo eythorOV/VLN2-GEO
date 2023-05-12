@@ -106,7 +106,7 @@ button {
     border-radius: 18px;
 	padding-left: 0.5rem;
 	background-color: #e44c5d;
-    cursor: pointer;
+    cursor: default;
     transition: 0.5s;
 }
 
