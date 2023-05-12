@@ -11,17 +11,6 @@ from django.shortcuts import render, redirect
 def index(request):
     return render(request, 'cart/cart.html')
 
-def delete_everything_after_review(request):
-    cart = Cart.objects.get(user=request.user)
-    cart_items = cart.cart_items.all()
-    cart_items.delete()
-    cart.total_price = 0
-    cart.save()
-    contact_info = ContactInfo.objects.get(user=request.user)
-    contact_info.delete()
-    payment_info = PaymentInfo.objects.get(user=request.user)
-    payment_info.delete()
-    return redirect('home-index')
 
 def get_cart(request):
     cart = Cart.objects.get(user=request.user)
@@ -56,6 +45,7 @@ def update_cart_item_quantity(request):
         return JsonResponse({'success': False})
 
 def contact_info(request):
+    already_user = ContactInfo.objects.filter(user=request.user).first()
     print('in contact info')
     if request.method == 'POST':
         print('in post')
@@ -73,7 +63,7 @@ def contact_info(request):
             contact_info = ContactInfo.objects.create(firstname=firstname, lastname=lastname, street=street, housenumber=housenumber, city=city, country=country, postalcode=postalcode, user=user)
             print('contact info created')
             return redirect('/checkout/payment/')
-    return render(request, 'cart/contact.html', {'title': 'Checkout - Contact Info'})
+    return render(request, 'cart/contact.html', {'already_user': already_user, 'title': 'Checkout - Contact Info'})
 
 def payment_info(request):
     if request.method == 'POST':
@@ -98,10 +88,19 @@ def review_page(request):
         'cart' : cart,
         'cart_items': cart_items}
     if request.method == 'POST':
-        return delete_everything_after_review(request)
+        return redirect('checkout-complete')
     return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
 
 def complete(request):
+    cart = Cart.objects.get(user=request.user)
+    cart_items = cart.cart_items.all()
+    cart_items.delete()
+    cart.total_price = 0
+    cart.save()
+    contact_info = ContactInfo.objects.get(user=request.user)
+    contact_info.delete()
+    payment_info = PaymentInfo.objects.get(user=request.user)
+    payment_info.delete()
     return render(request, 'cart/complete.html', {'title': 'Checkout - Complete'})
 
 def add_to_cart(request, product_id):
