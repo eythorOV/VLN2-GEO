@@ -58,6 +58,7 @@ th {
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px black;
+    font-size: 18px;
 }
 
 .checkout_button a {
@@ -68,12 +69,12 @@ th {
     font-weight: bold;
     text-shadow: 1px 1px black;
     font-size: 18px;
-    outline: none;              /*Taka út?*/
-    cursor: pointer;            /*Taka út?*/
+    outline: none;
+    cursor: pointer;
     transition: .5s;
     border: none;
     position: absolute;
-    left: 50%;
+    left: 52%;
     padding: 0.5rem;
     margin-top: 1rem;
     text-decoration: none;
@@ -88,12 +89,12 @@ th {
     font-weight: bold;
     text-shadow: 1px 1px black;
     font-size: 18px;
-    outline: none;              /*Taka út?*/
-    cursor: pointer;            /*Taka út?*/
+    outline: none;
+    cursor: pointer;
     transition: .5s;
     border: none;
     position: absolute;
-    left: 35%;
+    left: 37%;
     text-decoration: none;
     text-align: center;
     padding: 0.5rem;
@@ -134,10 +135,36 @@ th {
     text-shadow: 1px 1px black;
 }
 
+.delete_all {
+    background-color: #e44c5d;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 16px;
+}
+
+.delete_all:hover {
+    border-radius: 2rem;
+    background-color: #e44c5d;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+.delete_all:active {
+    background-color: #48171d;
+    color: white;
+    transition: 0s;
+}
+
 .delete_button {
     border: none;
     background-color: white;
     font-size: 18px;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .delete_button:hover {

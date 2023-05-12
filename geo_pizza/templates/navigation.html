@@ -21,6 +21,7 @@
         <!-- <li><a href="{% url 'menu-index' %}">Menu <span class="sr-only">(current)</span></a></li>
         <li><a href="{% url 'offers-index' %}">Offers</a></li> -->
         {% if user.is_authenticated %}
+        <img class="profile_picture" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile picture">
           {% if user.profile %}
             <p>Hi {{user.profile.first_name}} {{user.profile.last_name}}</p>
             {%else %}
