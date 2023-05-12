@@ -97,6 +97,8 @@ def review_page(request):
         'paymentinfo': PaymentInfo.objects.get(user=request.user),
         'cart' : cart,
         'cart_items': cart_items}
+    if request.method == 'POST':
+        return delete_everything_after_review(request)
     return render(request, 'cart/review.html', {'title': 'Checkout - Review'})
 
 def complete(request):
